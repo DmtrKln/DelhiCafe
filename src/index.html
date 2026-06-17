@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="bunnert" style="background-image: url(img/main/hero.png);">
+        <div class="container">
+          <div class="bunnert__wrap">
+            <div class="bunnert__content">
+              <h1>Добро пожаловать во <span>вкус индии</span></h1>
+              <h2>Смелый микс аутентичных рецептов и современной эстетики. Откройте для себя Индию заново</h2>
+              <div class="bunnert__btns">
+                <button class="bunnert__btn">
+                  Заказать сейчас
+                </button>
+                <button class="bunnert__btn">
+                  Меню
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="goods" style="background-image: url(img/main/goods.png);" id="goods">
+        <div class="container">
+          <ul class="goods__tabs">
+            <li class="goods__tab active" type="button" data-tab="curry">Карри</li>
+            <li class="goods__tab" type="button" data-tab="snacks">Закуски</li>
+            <li class="goods__tab" type="button" data-tab="naan">Наан</li>
+            <li class="goods__tab" type="button" data-tab="drinks">Напитки</li>
+          </ul>
+          <div class="goods__panels">
+            <div class="goods__panel active" data-panel="curry">
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Баттер Чикен</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Баттер Чикен</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Баттер Чикен</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Баттер Чикен</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="goods__panel" data-panel="snacks">
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Закуска</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Закуска</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Закуска</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Закуска</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="goods__panel " data-panel="naan">
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Наан</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Наан</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Наан</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Баттер Чикен</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="goods__panel " data-panel="drinks">
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Напитки</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Напитки</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Напитки</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__grid list-reset">
+                <div class="goods__cardImg">
+                  <span class="goods__badge">хит</span>
+                  <div class="goods__foodWrapp">
+                    <img class="goods__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="goods__cardBody">
+                  <div class="goods__cardHead">
+                    <h3 class="goods__cardTitle">Напитки</h3>
+                    <button class="goods__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="goods__cardDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                    Классика, которую любят все</p>
+                  <div class="goods__cardFooter">
+                    <p class="goods__weight">250 г</p>
+                    <p class="goods__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="goods__more">
+            <button class="goods__moreBtn" type="button">Больше блюд</button>
+          </div>
+          <div class="goods__about">
+            <div class="goods__aboutMedia">
+              <img src="img/main/about.png" alt="Интерьер Delhi Cafe" />
+            </div>
+            <div class="goods__aboutContent">
+              <h2 class="goods__aboutLabel">О нас</h2>
+              <div class="goods__aboutDesc">
+                <p class="goods__aboutLead"><span>Delhi Cafe</span> — это современный взгляд на многогранные
+                  гастрономические традиции. Мы создали комфортное и эстетичное пространство, где аутентичные
+                  вкусы Индии встречаются с безупречным сервисом. Это место, где приятно провести деловой обед,
+                  встретиться с друзьями или насладиться неспешным ужином.</p>
+                <p class="goods__aboutText">Секрет нашего вкуса — в идеальном балансе. Мы не идём на компромиссы:
+                  используем только свежие ингредиенты, чистые составы и оригинальные специи, чтобы каждый гость
+                  мог открыть для себя Индию заново.</p>
+                <a class="goods__aboutBtn">Подробнее о нас</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="delivery">
+        <div class="container">
+          <div class="delivery__slider swiper">
+            <div class="delivery__wrapp">
+              <div class="delivery__swiperReviews swiper reviews-slider">
+                <div class="delivery__swiperWrapp swiper-wrapper">
+                  <div class="delivery__swiperSlide swiper-slide">
+                    <div class="delivery__swiperDesc">
+                      <h3><span>доставка</span> на дом ив офис</h3>
+                      <p>Горячие блюда на дом и в офис Бережная упаковка Быстро. Вкусно.</p>
+                    </div>
+                    <a href="#" class="delivery__swiperLink">Заказать</a>
+                    <img src="img/main/deliverySwiperBox.png" alt="">
+                  </div>
+                  <div class="delivery__swiperSlide swiper-slide">
+                    <div class="delivery__swiperDesc">
+                      <h3>доставка на дом ив офис</h3>
+                      <p>Горячие блюда на дом и в офис Бережная упаковка Быстро. Вкусно.</p>
+                    </div>
+                    <a href="#" class="delivery__swiperLink">Заказать</a>
+                    <img src="img/main/deliverySwiperBox.png" alt="">
+                  </div>
+                  <div class="delivery__swiperSlide swiper-slide">
+                    <div class="delivery__swiperDesc">
+                      <h3>доставка на дом ив офис</h3>
+                      <p>Горячие блюда на дом и в офис Бережная упаковка Быстро. Вкусно.</p>
+                    </div>
+                    <a href="#" class="delivery__swiperLink">Заказать</a>
+                    <img src="img/main/deliverySwiperBox.png" alt="">
+                  </div>
+                  <div class="delivery__swiperSlide swiper-slide">
+                    <div class="delivery__swiperDesc">
+                      <h3>доставка на дом ив офис</h3>
+                      <p>Горячие блюда на дом и в офис Бережная упаковка Быстро. Вкусно.</p>
+                    </div>
+                    <a href="#" class="delivery__swiperLink">Заказать</a>
+                    <img src="img/main/deliverySwiperBox.png" alt="">
+                  </div>
+                  <div class="delivery__swiperSlide swiper-slide">
+                    <div class="delivery__swiperDesc">
+                      <h3>доставка на дом ив офис</h3>
+                      <p>Горячие блюда на дом и в офис Бережная упаковка Быстро. Вкусно.</p>
+                    </div>
+                    <a href="#" class="delivery__swiperLink">Заказать</a>
+                    <img src="img/main/deliverySwiperBox.png" alt="">
+                  </div>
+                  <div class="delivery__swiperSlide swiper-slide">
+                    <div class="delivery__swiperDesc">
+                      <h3>доставка на дом ив офис</h3>
+                      <p>Горячие блюда на дом и в офис Бережная упаковка Быстро. Вкусно.</p>
+                    </div>
+                    <a href="#" class="delivery__swiperLink">Заказать</a>
+                    <img src="img/main/deliverySwiperBox.png" alt="">
+                  </div>
+                </div>
+                <div class="delivery__swiperPagination swiper-pagination"></div>
+              </div>
+              <a href="catalog.html" class="delivery__mobileLink">Все товары</a>
+            </div>>
+            <div class="delivery__pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="atmosphere">
+        <div class="container">
+          <div class="atmosphere__head">
+            <h2 class="section-title"><span>Атмосфера</span> Индии</h2>
+            <div class="atmosphere__nav">
+              <button class="atmosphere__arrow atmosphere__prev" type="button" aria-label="Назад">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 1L1 8L8 15M1 8H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="atmosphere__arrow atmosphere__next" type="button" aria-label="Вперёд">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 1L19 8L12 15M19 8H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="atmosphere__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="atmosphere__slide">
+                  <img src="img/main/atmosphere-1.png" alt="Атмосфера Индии" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="atmosphere__slide">
+                  <img src="img/main/atmosphere-2.png" alt="Атмосфера Индии" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="atmosphere__slide">
+                  <img src="img/main/atmosphere-3.png" alt="Атмосфера Индии" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="atmosphere__slide">
+                  <img src="img/main/atmosphere-4.png" alt="Атмосфера Индии" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <h2 class="section-title reviews__title"><span>Отзывы</span> наших гостей</h2>
+          <div class="reviews__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="reviews__card">
+                  <div class="reviews__cardHead">
+                    <div class="reviews__person">
+                      <h3 class="reviews__name">Виктор</h3>
+                      <div class="reviews__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                    </div>
+                    <img class="reviews__avatar" src="img/main/review-avatar.png" alt="" />
+                  </div>
+                  <p class="reviews__text">Заглянули с друзьями на ужин — остались в полном восторге. Баттер чикен
+                    нежнейший, наан горячий прямо из тандыра. Уютная атмосфера и внимательный сервис…</p>
+                  <span class="reviews__date">15 января 2026</span>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="reviews__card">
+                  <div class="reviews__cardHead">
+                    <div class="reviews__person">
+                      <h3 class="reviews__name">Анна</h3>
+                      <div class="reviews__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                    </div>
+                    <img class="reviews__avatar" src="img/main/review-avatar.png" alt="" />
+                  </div>
+                  <p class="reviews__text">Заказывала индийский ланч в офис — приехало быстро и в аккуратной
+                    упаковке. Порции большие, всё свежее и ароматное. Теперь это наш постоянный обед…</p>
+                  <span class="reviews__date">15 января 2026</span>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="reviews__card">
+                  <div class="reviews__cardHead">
+                    <div class="reviews__person">
+                      <h3 class="reviews__name">Дмитрий</h3>
+                      <div class="reviews__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                    </div>
+                    <img class="reviews__avatar" src="img/main/review-avatar.png" alt="" />
+                  </div>
+                  <p class="reviews__text">Отличное место для делового обеда. Интерьер стильный, музыка ненавязчивая,
+                    а специи подобраны идеально — не остро, но очень вкусно. Рекомендую тикка масала…</p>
+                  <span class="reviews__date">15 января 2026</span>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="reviews__card">
+                  <div class="reviews__cardHead">
+                    <div class="reviews__person">
+                      <h3 class="reviews__name">Ольга</h3>
+                      <div class="reviews__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                    </div>
+                    <img class="reviews__avatar" src="img/main/review-avatar.png" alt="" />
+                  </div>
+                  <p class="reviews__text">Влюбилась в их манго ласси и чесночный наан! Приятно, что есть
+                    вегетарианские блюда. Персонал помог с выбором и всё подробно рассказал про каждое блюдо…</p>
+                  <span class="reviews__date">15 января 2026</span>
+                </article>
+              </div>
+            </div>
+            <div class="reviews__pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

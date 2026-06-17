@@ -1,0 +1,13 @@
+$font-family: "Bounded", sans-serif;
+$second-family: "Montserrat", sans-serif;
+
+$pink: #ff4cff;
+$dark-grey: #242424;
+$text-grey: #b3b3b3;
+
+:root {
+  // base
+  --content-width: 1542px;
+  --container-offset: 18px;
+  --container-width: var(--content-width);
+}

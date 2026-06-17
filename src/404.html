@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="notFound">
+        <img src="img/main/heroImgMobile.png" class="bannert__imgMobile" alt="" />
+        <div class="container">
+          <div class="notFound__wrapp">
+            <div class="notFound__content">
+              <h1 class="notFound__title">404</h1>
+              <h2 class="notFound__subtitle">Страница не найдена</h2>
+              <p class="notFound__desc">
+                Запрашиваемая вами страница была удалена, перемещена или временно недоступна. Пожалуйста, убедитесь, что
+                адрес введен корректно
+              </p>
+              <div class="notFound__btns">
+                <a href="index.html" class="notFound__btn notFound__btn--primary">Вернуться на главную</a>
+                <a href="catalog.html" class="notFound__btn notFound__btn--outline">Перейти в каталог</a>
+              </div>
+            </div>
+            <img src="img/main/bannertImg.png" class="notFound__img" alt="Нитка с иглой" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
