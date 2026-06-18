@@ -1,212 +1,129 @@
-// .footer {
-//   background-color: $dark-grey;
-//   border-top: 1px solid $green;
-//   padding: 0 0 30px 0;
+.footer {
+    position: relative;
+    border-radius: 112px 112px 0 0;
 
-//   @include mobile{
-//     padding: 0 20px 76px 20px;
-//   }
+    &__imgLeft {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
-//   &__wrapp{
-//     padding: 0 160px;
+    &__imgRight {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
-//     @media (max-width: 1375px) {
-//       padding: 0 21px;
-//     }
-//   }
+    &__wrapp {
+        display: flex;
+        gap: 134px;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-//   &__top {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//     gap: 62px 40px;
-//     padding: 55px 0 62px 0;
+    &__left {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 70px;
+        justify-content: space-between;
+    }
 
-//     @media (max-width: 1580px) {
-//       row-gap: 0;
-//     }
+    &__nav,
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-//     @include mobile {
-//       flex-direction: column;
-//       align-items: flex-start;
-//       gap: 0;
-//       padding: 32px 0 45px 0;
-//     }
-//   }
+    &__nav {
+        h3 {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 130%;
+            color: #fff;
+        }
+    }
 
-//   &__right{
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 115px;
-//     justify-content: space-between;  
-    
-//     @media (max-width: 1386px) {
-//       row-gap: 0;
-//     }
-//   }
+    &__menu {
+        li a {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
 
-//   &__contact{
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
+            &:hover {
+                color: $pink;
+            }
+        }
+    }
 
-//     gap: 80px;
+    &__contactUs {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
 
-//     @media (max-width: 1386px) {
-//       row-gap: 0;
-//     }
-//   }
+    &__contactUsTop {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
 
-//   &__socialWrapp{
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 92px;
-//     justify-content: space-between;
+        h3 {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 130%;
+            color: #fff;
+        }
 
-//     @media (max-width: 819px) {
-//       row-gap: 0;
-//     }
-//   }
+        a {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 16px;
+            color: #fff;
+        }
+    }
 
-//   &__logo {
-//     display: flex;
-//     flex-direction: column;
+    &__address {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-//     gap: 5px;
-//     margin-bottom: 38px;
-//   }
+        p {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: rgba(255, 255, 255, 0.9);
+        }
 
-//   &__logoName {
-//     font-family: $font3;
-//     font-weight: 400;
-//     font-size: 38px;
-//     line-height: 110%;
-//     color: $white;
+    }
 
-//     @include mobile {
-//       font-size: 47px;
-//     }
-//   }
+    &__addressTop {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
 
-//   &__logoCompany {
-//     font-family: $second-family;
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 100%;
-//     color: #b8b8b8;
+        h3 {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 130%;
+            color: #fff;
+        }
 
-//     @include mobile {
-//       font-weight: 300;
-//       font-size: 19px;
-//     }
-//   }
+        p {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 16px;
+            color: #fff;
+        }
+    }
 
-//   &__mail,
-//   &__tel {
-//     font-family: $second-family;
-//     font-weight: 500;
-//     font-size: 20px;
-//     line-height: 100%;
-//     color: $white;
-//     transition: color 0.3s ease;
-
-//     margin-bottom: 25px;
-
-//     &:hover {
-//       color: $green;
-//     }
-
-//     @include mobile {
-//       font-size: 16px;
-//     }
-//   }
-
-//   &__address {
-//     max-width: 260px;
-//     font-family: $font-family;
-//     font-weight: 500;
-//     font-size: 20px;
-//     line-height: 130%;
-//     color: $white;
-
-//     margin-bottom: 45px;
-
-//     @include mobile {
-//       font-size: 16px;
-//     }
-//   }
-
-//   &__social {
-//     display: flex;
-//     align-items: flex-start;
-//     gap: 20px;
-//   }
-
-//   &__socialLink {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 42px;
-//     height: 42px;
-//     border: 1px solid $light-grey;
-//     border-radius: 50%;
-//     color: $light-grey;
-//     transition: color 0.3s ease, border-color 0.3s ease;
-
-//     &:hover {
-//       color: $green;
-//       border-color: $green;
-//     }
-//   }
-
-//   &__bottom {
-//     position: relative;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     gap: 20px;
-//     padding: 30px 0 30px 0;
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       top: 0;
-//       left: 50%;
-//       transform: translateX(-50%);
-//       width: 100vw;
-//       height: 1px;
-//       background-color: rgba(255, 255, 255, 0.08);
-//     }
-
-//     @include mobile {
-//       flex-direction: column;
-//       align-items: flex-start;
-//       gap: 25px;
-//       padding: 38px 0 0 0;
-//     }
-//   }
-
-//   &__policy,
-//   &__dev {
-//     font-family: $second-family;
-//     font-weight: 300;
-//     font-size: 16px;
-//     line-height: 100%;
-//     color: #fff;
-
-//   }
-
-//   &__dev {
-//     transition: color 0.3s ease;
-//     color: $light-grey;
-
-//     @include mobile{
-//       color: #fff;
-//     }
-
-//     &:hover {
-//       color: $green;
-//     }
-//   }
-// }
+    &__social {
+        display: flex;
+        gap: 14px;
+    }
+}

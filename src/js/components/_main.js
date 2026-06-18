@@ -77,10 +77,10 @@ const atmosphereSlider = new Swiper('.atmosphere__slider', {
   },
   breakpoints: {
     768: {
-      slidesPerView: 1.6,
+      slidesPerView: 1,
     },
     1200: {
-      slidesPerView: 2.1,
+      slidesPerView: 2,
     },
   },
 });
