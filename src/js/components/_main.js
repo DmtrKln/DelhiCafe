@@ -16,7 +16,7 @@ goodsTabs.forEach((tab) => {
 const moreBtn = document.querySelector('.goods__moreBtn');
 
 moreBtn?.addEventListener('click', () => {
-  const activeGrid = document.querySelector('.goods__panel.is-active .goods__grid');
+  const activeGrid = document.querySelector('.goods__panel.active .goods__grid');
   if (!activeGrid) return;
 
   activeGrid.querySelectorAll('.goods__card').forEach((card) => {
@@ -105,3 +105,18 @@ const reviewsSlider = new Swiper('.reviews__slider', {
     },
   },
 });
+
+//point
+
+const point1 = document.querySelector(".bunnert__point1");
+const point2 = document.querySelector(".bunnert__point2");
+const titlePoint1 = document.querySelector(".bunnert__wrappPoint1");
+const titlePoint2 = document.querySelector(".bunnert__wrappPoint2");
+
+const pairs = [[point1, titlePoint1], [point2, titlePoint2]];
+
+
+pairs.forEach(([point, title]) => {
+  point.addEventListener("mouseenter", () => title.classList.add('active'));
+  point.addEventListener("mouseleave", () => title.classList.remove('active'));
+})

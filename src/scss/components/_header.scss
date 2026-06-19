@@ -4,27 +4,88 @@
   top: 0;
   z-index: 99999;
   width: 100%;
-  padding: 10px 0;
-  background-color: #1a1a1a;
 
   @include maxdesktop {
     padding: 25px 0 20px 0;
   }
 
   &.scrolled {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    .header__logoWrapp {
+      border: 1px solid rgba(217, 217, 217, 0.46);
+
+      &::after {
+        border-top: 1px solid rgba(217, 217, 217, 0.46);
+        border-bottom: 1px solid rgba(217, 217, 217, 0.46);
+      }
+    }
+
+    .header__right {
+      border: 1px solid rgba(217, 217, 217, 0.46);
+
+      &::before {
+        border-top: 1px solid rgba(217, 217, 217, 0.46);
+        border-bottom: 1px solid rgba(217, 217, 217, 0.46);
+      }
+    }
+
+
   }
 
-  &__wrap {
-    display: grid;
-    grid-template-columns: auto minmax(330px, 470px) auto;
-    column-gap: 35px;
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+
+  }
+
+  &__logoWrapp {
+    position: relative;
+    background-color: #1a1a1a;
+    width: 220px;
+    padding: 15px 52px 15px 0;
+
+    border-radius: 0 30px 30px 0;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100%;
+      height: 100%;
+      width: 100vw;
+
+      background-color: #1a1a1a;
+
+    }
+  }
+
+
+
+  &__right {
+    display: flex;
+    gap: 35px;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    width: 100%;
 
-    @include maxdesktop {
-      grid-template-columns: auto auto;
+    border-radius: 30px 0 0 30px;
+
+    background-color: #1a1a1a;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      height: 100%;
+      width: 100vw;
+
+      background-color: #1a1a1a;
+
     }
+
   }
 
 
@@ -35,12 +96,14 @@
     @include maxdesktop {
       display: none;
     }
+
   }
 
   &__menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    max-width: 572px;
+    padding: 20px 0 20px 122px;
 
     a {
       font-family: $font-family;
@@ -51,7 +114,6 @@
       color: #fff;
 
       &:hover {
-        backdrop-filter: blur(5px);
         background: rgba(255, 255, 255, 0.42);
       }
     }
@@ -67,6 +129,7 @@
     background: $pink;
     border-radius: 14px;
     padding: 8px 16px;
+    white-space: nowrap;
 
     font-family: $font-family;
     font-weight: 400;
@@ -75,7 +138,14 @@
     transition: filter 0.3s ease;
 
     &:hover {
-      filter: brightness(1.08);
+      border: 1px solid $pink;
+      background-color: #fff;
+      color: $pink;
+    }
+
+    &:active {
+      background: $text-grey;
+      color: #fff;
     }
   }
 

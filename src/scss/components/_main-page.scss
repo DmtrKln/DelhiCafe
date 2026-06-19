@@ -4,9 +4,70 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    aspect-ratio: 1920/1080;
+    width: 100%;
 
     @include mobile {
         padding: 176px 0 122px 0;
+    }
+
+    &__wrappPoint1 {
+        p {
+
+            display: none;
+            position: absolute;
+            top: 15%;
+            right: 25%;
+            backdrop-filter: blur(5.699999809265137px);
+            background: rgba(217, 217, 217, 0.38);
+            border-radius: 35px;
+
+            padding: 20px 30px;
+        }
+    }
+
+    &__wrappPoint2 {
+        
+        p {
+
+            display: none;
+            position: absolute;
+            top: 70%;
+            right: 56%;
+            backdrop-filter: blur(5.699999809265137px);
+            background: rgba(217, 217, 217, 0.38);
+            border-radius: 35px;
+
+            padding: 20px 30px;
+        }
+    }
+
+    &__wrappPoint1,
+    &__wrappPoint2{
+        &.active p{
+            display: block;
+        }
+    }
+
+    &__point1,
+    &__point2 {
+        position: absolute;
+        top: 10%;
+        right: 20%;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.59);
+        width: 27px;
+        height: 27px;
+    }
+
+    &__point1 {
+        top: 10%;
+        right: 20%;
+    }
+
+    &__point2 {
+        top: 40%;
+        right: 50%;
     }
 
     &__content {
@@ -14,6 +75,7 @@
         flex-direction: column;
 
         max-width: 782px;
+        gap: 50px;
 
         h1 {
             font-weight: 400;
@@ -22,8 +84,6 @@
             text-transform: uppercase;
 
             color: #ffffff;
-
-            margin-bottom: 26px;
 
             @include mobile {
                 font-size: 22px;
@@ -42,14 +102,18 @@
             line-height: 100%;
             color: #ffffff;
 
-            margin-bottom: 50px;
-
             @include mobile {
                 font-size: 18px;
 
-                margin-bottom: 30px;
             }
         }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
     }
 
     &__btns {
@@ -74,11 +138,19 @@
             background-color: $pink;
 
             border: 2px solid transparent;
+
             border-radius: 32px;
             cursor: pointer;
 
             &:hover {
-                filter: brightness(1.08);
+                border: 1px solid $pink;
+                background-color: #fff;
+                color: $pink;
+            }
+
+            &:active {
+                background: $text-grey;
+                color: #fff;
             }
         }
 
@@ -92,8 +164,14 @@
             cursor: pointer;
 
             &:hover {
+                border: 1px solid $pink;
                 background-color: #fff;
-                color: #141414;
+                color: $pink;
+            }
+
+            &:active {
+                background: $text-grey;
+                color: #fff;
             }
         }
     }
@@ -101,12 +179,27 @@
 }
 
 .goods {
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+
+    &__imgLeft {
+        position: absolute;
+        top: 30%;
+        left: 0;
+
+        z-index: -1;
+    }
+
+    &__imgRight {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        z-index: -1;
+    }
 
     padding: 54px 0;
 
-    @include small-tablet {
+    @include mobile {
         padding: 60px 0;
     }
 
@@ -115,7 +208,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
 
         @include mobile {
             gap: 10px;
@@ -155,6 +248,7 @@
     &__panel {
         gap: 40px;
         display: none;
+        margin-bottom: 60px;
 
         &.active {
             display: flex;
@@ -165,8 +259,8 @@
     &__grid {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 22px;
-        height: 612px;
         width: calc((100% - 120px)/4);
     }
 
@@ -278,7 +372,6 @@
     &__more {
         display: flex;
         justify-content: center;
-        margin-top: 50px;
     }
 
     &__moreBtn {
@@ -301,7 +394,7 @@
     }
 
     &__about {
-        padding: 150px 0 150px 0;
+        margin: 150px 0 150px 0;
         display: flex;
         justify-content: space-between;
         gap: 86px;
@@ -338,18 +431,20 @@
 
     &__aboutLead {
         font-family: $font-family;
-        font-weight: 400;
-        font-size: 29px;
+        font-weight: 3 00;
+        font-size: 20px;
         color: #fff;
 
         span {
+            font-weight: 400;
+            font-size: 29px;
             color: $pink;
         }
     }
 
     &__aboutText {
-        font-family: $second-family;
-        font-weight: 400;
+        font-family: $font-family;
+        font-weight: 300;
         font-size: 20px;
         color: #fff;
     }
@@ -361,14 +456,27 @@
         font-size: 20px;
         border-radius: 37px;
         color: #fff;
+        cursor: pointer;
 
         width: fit-content;
         background-color: $pink;
+        border: 1px solid transparent;
+
+        &:hover {
+            border: 1px solid $pink;
+            background-color: #fff;
+            color: $pink;
+        }
+
+        &:active {
+            background: $text-grey;
+            color: #fff;
+        }
     }
 }
 
 .delivery {
-    padding: 112px 0 155px;
+    padding: 72px 0 72px;
     background-color: $dark-grey;
 
     @include mobile {
@@ -418,7 +526,6 @@
         display: flex;
         justify-content: center;
         gap: 10px;
-        margin-top: 40px;
 
         .swiper-pagination-bullet {
             width: 10px;
@@ -428,7 +535,7 @@
             border-radius: 5px;
             background: rgba(255, 255, 255, 0.3);
             opacity: 1;
-            transition: width 0.3s ease, background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .swiper-pagination-bullet-active {
@@ -480,6 +587,17 @@
         background-color: $pink;
         border-radius: 30px;
         padding: 8px 55px;
+
+        &:hover {
+            border: 1px solid $pink;
+            background-color: #fff;
+            color: $pink;
+        }
+
+        &:active {
+            background: $text-grey;
+            color: #fff;
+        }
     }
 
     &__title {
@@ -545,7 +663,7 @@
 
     &__swiperReviews {
         width: 100%;
-        padding: 87px 0 68px;
+        padding: 41px 0 34px;
 
         @include mobile {
             margin-bottom: 22px;
@@ -556,7 +674,7 @@
 }
 
 .atmosphere {
-    padding: 55px 0 155px 0;
+    margin: 55px 0 155px 0;
     position: relative;
 
     background-color: #1a1a1a;
@@ -626,7 +744,7 @@
 }
 
 .reviews {
-    padding: 0 0 145px 0;
+    margin: 0 0 145px 0;
     background-color: #1a1a1a;
 
     @include small-tablet {
@@ -657,11 +775,9 @@
     &__card {
         display: flex;
         flex-direction: column;
-        height: 100%;
-        min-height: 300px;
         padding: 40px 44px 58px 44px;
         border: 1px solid rgba(255, 76, 255, 0.25);
-        border-radius: 18px;
+        border-radius: 30px;
         background: #1a1a1a;
     }
 
@@ -707,26 +823,29 @@
         font-size: 16px;
         color: #fff;
         margin-bottom: 82px;
-        flex-grow: 1;
     }
 
     &__date {
         font-family: $second-family;
-        font-weight: 500;
-        font-size: 13px;
-        color: #777;
+        font-weight: 400;
+        font-size: 14px;
+        color: #fff;
     }
 
     &__pagination {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 4px;
-        border-radius: 4px;
+        height: 8px;
+        width: 428px;
+        border-radius: 40px;
         background: rgba(255, 255, 255, 0.15);
+        position: relative;
+
+        &.swiper-pagination-progressbar {
+            margin: 30px auto 0 auto;
+            width: 428px;
+        }
 
         .swiper-pagination-progressbar-fill {
-            border-radius: 4px;
+            border-radius: 40px;
             background: $pink;
         }
     }
