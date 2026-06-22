@@ -41,17 +41,17 @@ const swiper = new Swiper(".delivery-slider", {
   slidesPerView: 1,
   centeredSlides: true,
   loop: true,
-  spaceBetween: 60,
 
   breakpoints: {
-    400: {
-      slidesPerView: 1,
-    },
     768: {
       slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 30,
     },
-    1200: {
+    1260: {
       slidesPerView: 3,
+        spaceBetween: 60,
+      centeredSlides: true,
     },
   },
 
