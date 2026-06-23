@@ -1,15 +1,40 @@
 .footer {
     position: relative;
     border-radius: 112px 112px 0 0;
-    padding: 86px 0 0 0;
+    padding: 86px 0 110px 0;
 
-    &__imgLeft {
+    margin: 150px 0 0 0;
+
+    @include mobile {
+        padding: 70px 0 60px 0;
+        margin: 60px 0 0 0;
+    }
+
+    &__imgLeft,
+    &__imgRight {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__imgLeftMobile,
+    &__imgRightMobile {
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+    &__imgLeft,
+    &__imgLeftMobile {
         position: absolute;
         top: 0;
         left: 0;
     }
 
-    &__imgRight {
+    &__imgRight,
+    &__imgRightMobile {
         position: absolute;
         top: 0;
         right: 0;
@@ -20,11 +45,30 @@
         gap: 134px;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+
+        @include mobile {
+            gap: 60px;
+            justify-content: center;
+        }
     }
 
     &__logo {
+
+        @include mobile {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
         img {
+
             width: 314px;
+
+            @include mobile {
+
+                width: 142px;
+            }
         }
     }
 
@@ -33,6 +77,10 @@
         flex-wrap: wrap;
         gap: 70px;
         justify-content: space-between;
+
+        @include mobile {
+            gap: 40px;
+        }
     }
 
     &__nav,
@@ -40,19 +88,38 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__nav {
+
+        @include mobile {
+            gap: 20px;
+        }
+
         h3 {
             font-family: $font-family;
             font-weight: 500;
             font-size: 22px;
             line-height: 130%;
             color: #fff;
+
+            @include mobile {
+                text-align: center;
+                font-size: 18px;
+            }
         }
     }
 
     &__menu {
+
+        @include mobile {
+            text-align: center;
+        }
+
         li a {
             font-family: $font-family;
             font-weight: 300;
@@ -71,6 +138,11 @@
         display: flex;
         flex-direction: column;
         gap: 25px;
+
+        @include mobile {
+            width: 100%;
+        }
+
     }
 
     &__contactUsTop {
@@ -78,12 +150,22 @@
         flex-direction: column;
         gap: 15px;
 
+        @include mobile {
+            text-align: center;
+        }
+
         h3 {
             font-family: $font-family;
             font-weight: 500;
             font-size: 22px;
             line-height: 130%;
             color: #fff;
+
+            text-align: center;
+
+            @include mobile {
+                font-size: 18px;
+            }
         }
 
         a {
@@ -95,21 +177,44 @@
         }
     }
 
-    &__address {
+    &__addressWrapp {
         display: flex;
         flex-direction: column;
         gap: 20px;
 
         z-index: 99;
 
-        p {
-            font-family: $font-family;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 120%;
-            color: rgba(255, 255, 255, 0.9);
+        @include mobile {
+            width: 100%;
+            justify-content: center;
+            gap: 50px;
         }
+    }
 
+    &__address,
+    &__development {
+        font-family: $font-family;
+        font-weight: 500;
+        line-height: 120%;
+        color: rgba(255, 255, 255, 0.9);
+
+        @include mobile {
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+
+    &__address {
+        font-size: 16px;
+    }
+
+    &__development {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+
+        @include mobile {
+            font-size: 16px;
+        }
     }
 
     &__addressTop {
@@ -123,6 +228,11 @@
             font-size: 22px;
             line-height: 130%;
             color: #fff;
+
+            @include mobile {
+                text-align: center;
+                font-size: 18px;
+            }
         }
 
         p {
@@ -136,5 +246,11 @@
     &__social {
         display: flex;
         gap: 14px;
+
+        @include mobile {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

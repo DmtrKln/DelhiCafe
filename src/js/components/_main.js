@@ -12,6 +12,26 @@ goodsTabs.forEach((tab) => {
   });
 });
 
+// мобилка: переключение слайдеров товаров по табам
+// (делегирование ловит и клоны-слайды от loop)
+const goodsTabsSlider = document.querySelector(".goods__slider");
+const goodsMobilePanels = document.querySelectorAll(".goods__swiperMobile");
+
+goodsTabsSlider?.addEventListener("click", (e) => {
+  const tab = e.target.closest(".goods__tabMobile");
+  if (!tab) return;
+
+  const target = tab.dataset.tab;
+
+  goodsTabsSlider
+    .querySelectorAll(".goods__tabMobile")
+    .forEach((t) => t.classList.toggle("active", t.dataset.tab === target));
+
+  goodsMobilePanels.forEach((panel) =>
+    panel.classList.toggle("active", panel.dataset.panel === target)
+  );
+});
+
 const moreBtn = document.querySelector(".goods__moreBtn");
 
 moreBtn?.addEventListener("click", () => {
@@ -41,6 +61,8 @@ const swiper = new Swiper(".delivery-slider", {
   slidesPerView: 1,
   centeredSlides: true,
   loop: true,
+  loopedSlides: 4,
+  spaceBetween: 30,
 
   breakpoints: {
     768: {
@@ -50,7 +72,7 @@ const swiper = new Swiper(".delivery-slider", {
     },
     1260: {
       slidesPerView: 3,
-        spaceBetween: 60,
+      spaceBetween: 60,
       centeredSlides: true,
     },
   },
@@ -62,7 +84,6 @@ const swiper = new Swiper(".delivery-slider", {
 });
 
 const atmosphereSlider = new Swiper(".atmosphere__slider", {
-  slidesPerView: 1.1,
   spaceBetween: 24,
   speed: 700,
   loop: true,
@@ -78,6 +99,11 @@ const atmosphereSlider = new Swiper(".atmosphere__slider", {
       slidesPerView: 2,
     },
   },
+
+  pagination: {
+    el: ".atmosphere__pagination",
+    clickable: true,
+  },
 });
 
 const reviewsSlider = new Swiper(".reviews__slider", {
@@ -89,7 +115,7 @@ const reviewsSlider = new Swiper(".reviews__slider", {
     type: "progressbar",
   },
   breakpoints: {
-    576: {
+    768: {
       slidesPerView: 2,
     },
     1024: {
@@ -118,29 +144,45 @@ pairs.forEach(([point, title]) => {
   point.addEventListener("mouseleave", () => title.classList.remove("active"));
 });
 
-let goods;
+// swiper mobile goooooods
+
+let goods = [];
 const goodsMedia = window.matchMedia("(max-width: 576px)");
 
 function initGoodsSwiper(e) {
   if (e.matches) {
-    if (!goods) {
-      goods = new Swiper(".goods-slider", {
-        slidesPerView: 1,
-        centeredSlides: true,
-        loop: true,
-        spaceBetween: 30,
-        pagination: {
-          el: ".goods__pagination",   // ← и селектор поправь (был .goods__pagination)
-          clickable: true,
-          dynamicBullets: true,
-        },
+    if (!goods.length) {
+      document.querySelectorAll(".goods-slider").forEach((el) => {
+        goods.push(
+          new Swiper(el, {
+            slidesPerView: 1,
+            loop: true,
+            loopedSlides: 3,
+            spaceBetween: 30,
+            observer: true,
+            observeParents: true,
+            pagination: {
+              el: el.querySelector(".goods__pagination"),
+              clickable: true,
+              dynamicBullets: true,
+            },
+          })
+        );
       });
     }
-  } else if (goods) {
-    goods.destroy(true, true);
-    goods = undefined;
+  } else if (goods.length) {
+    goods.forEach((s) => s.destroy(true, true));
+    goods = [];
   }
 }
 
 goodsMedia.addEventListener("change", initGoodsSwiper);
 initGoodsSwiper(goodsMedia);
+
+
+const tabs = new Swiper('.goods__slider', {
+  spaceBetween: 10,
+  speed: 700,
+  slidesPerView: 2.1,
+  loop:true,
+})

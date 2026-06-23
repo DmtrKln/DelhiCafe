@@ -25,12 +25,13 @@
 
       @include mobile {
         border: none;
+        height: fit-content;
 
       }
 
 
       img {
-        width: 136px;
+        width: 153px;
       }
 
       &::after {
@@ -82,7 +83,7 @@
   &__logoWrapp {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 68px;
 
     position: relative;
     box-sizing: border-box;
@@ -93,7 +94,7 @@
     transition: all 0.3s ease;
 
     @include mobile {
-      height: auto;
+      height: fit-content;
       padding: 0;
     }
 
@@ -117,7 +118,7 @@
     }
 
     img {
-      width: 220px;
+      width: 153px;
       max-width: none;
 
       transition: all 0.3s ease;
@@ -143,8 +144,9 @@
     transition: all 0.3s ease;
     max-width: 1206px;
 
-    @media (max-width: 1300px) {
+    @include maxdesktop  {
       width: fit-content;
+      padding-left: 40px;
       gap: 14px;
     }
 
@@ -181,7 +183,7 @@
     width: 100%;
     justify-self: center;
 
-    @media (max-width: 1300px) {
+    @include maxdesktop  {
       display: none;
     }
   }
@@ -196,7 +198,7 @@
       font-family: $font-family;
       border-radius: 32px;
       font-weight: 300;
-      font-size: 18px;
+      font-size: 16px;
       padding: 8px 20px;
       color: #fff;
 
@@ -238,7 +240,7 @@
       color: #fff;
     }
 
-    @media (max-width: 1300px) {
+    @include maxdesktop {
       display: none;
     }
 
