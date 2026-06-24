@@ -1,56 +1,61 @@
-const goodsTabs = document.querySelectorAll(".goods__tab");
-const goodsPanels = document.querySelectorAll(".goods__panel");
-
-goodsTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const target = tab.dataset.tab;
-
-    goodsTabs.forEach((t) => t.classList.toggle("active", t === tab));
-    goodsPanels.forEach((panel) => {
-      panel.classList.toggle("active", panel.dataset.panel === target);
-    });
-  });
-});
-
-// мобилка: переключение слайдеров товаров по табам
-// (делегирование ловит и клоны-слайды от loop)
-const goodsTabsSlider = document.querySelector(".goods__slider");
-const goodsMobilePanels = document.querySelectorAll(".goods__swiperMobile");
-
-goodsTabsSlider?.addEventListener("click", (e) => {
-  const tab = e.target.closest(".goods__tabMobile");
+document.addEventListener("click", (e) => {
+  const tab = e.target.closest("[data-tab]");
   if (!tab) return;
 
+  const cls = [...tab.classList].find((c) => c.endsWith("__tab"));
+  if (!cls) return;
+
+  const block = cls.replace("__tab", "");
   const target = tab.dataset.tab;
 
-  goodsTabsSlider
-    .querySelectorAll(".goods__tabMobile")
-    .forEach((t) => t.classList.toggle("active", t.dataset.tab === target));
-
-  goodsMobilePanels.forEach((panel) =>
-    panel.classList.toggle("active", panel.dataset.panel === target)
-  );
+  document
+    .querySelectorAll(`.${block}__tab`)
+    .forEach((t) => t.classList.toggle("active", t === tab));
+  document
+    .querySelectorAll(`.${block}__panel`)
+    .forEach((p) => p.classList.toggle("active", p.dataset.panel === target));
 });
 
-const moreBtn = document.querySelector(".goods__moreBtn");
+document.addEventListener("click", (e) => {
+  const tab = e.target.closest("[data-tab]");
+  if (!tab) return;
 
-moreBtn?.addEventListener("click", () => {
+  const cls = [...tab.classList].find((c) => c.endsWith("__tabMobile"));
+  if (!cls) return;
+
+  const block = cls.replace("__tabMobile", "");
+  const target = tab.dataset.tab;
+
+  document
+    .querySelectorAll(`.${block}__tabMobile`)
+    .forEach((t) => t.classList.toggle("active", t.dataset.tab === target));
+  document
+    .querySelectorAll(`.${block}__swiperMobile, .${block}__panel`)
+    .forEach((p) => p.classList.toggle("active", p.dataset.panel === target));
+});
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".goods__moreBtn, .menu__moreBtn");
+  if (!btn) return;
+
+  const block = [...btn.classList]
+    .find((c) => c.endsWith("__moreBtn"))
+    .replace("__moreBtn", "");
   const activeGrid = document.querySelector(
-    ".goods__panel.active .goods__grid"
+    `.${block}__panel.active .${block}__grid`
   );
   if (!activeGrid) return;
 
-  activeGrid.querySelectorAll(".goods__card").forEach((card) => {
+  activeGrid.querySelectorAll(`.${block}__card`).forEach((card) => {
     activeGrid.appendChild(card.cloneNode(true));
   });
 });
 
-const goodsSection = document.querySelector(".goods");
 const cartCount = document.querySelector(".header__cartCount");
 let cartItems = cartCount ? parseInt(cartCount.textContent, 10) || 0 : 0;
 
-goodsSection?.addEventListener("click", (e) => {
-  const addBtn = e.target.closest(".goods__add");
+document.addEventListener("click", (e) => {
+  const addBtn = e.target.closest(".goods__add, .menu__add");
   if (!addBtn) return;
 
   cartItems += 1;
@@ -140,6 +145,7 @@ const pairs = [
 ];
 
 pairs.forEach(([point, title]) => {
+  if (!point || !title) return;
   point.addEventListener("mouseenter", () => title.classList.add("active"));
   point.addEventListener("mouseleave", () => title.classList.remove("active"));
 });
@@ -180,9 +186,27 @@ goodsMedia.addEventListener("change", initGoodsSwiper);
 initGoodsSwiper(goodsMedia);
 
 
-const tabs = new Swiper('.goods__slider', {
-  spaceBetween: 10,
-  speed: 700,
-  slidesPerView: 2.1,
-  loop:true,
-})
+document.querySelectorAll(".goods__slider, .menu__slider").forEach((el) => {
+  new Swiper(el, {
+    spaceBetween: 10,
+    speed: 700,
+    slidesPerView: 2.1,
+  });
+});
+
+
+//aboutGoods
+
+const totalEl = document.querySelector('.aboutGoods__priceMobile'); // счётчик «0 ₽»
+let total = 0;
+
+document.querySelector('.aboutGoods').addEventListener('click', (e) => {
+  const btn = e.target.closest('.aboutGoods__add');
+  if (!btn) return;
+
+  const priceText = document.querySelector('.aboutGoods__price').textContent; // «360 ₽»
+  const price = parseInt(priceText.replace(/\D/g, ''), 10);
+
+  total += price;
+  totalEl.textContent = total + ' ₽';
+});

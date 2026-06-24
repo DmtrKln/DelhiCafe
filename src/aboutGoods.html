@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <section class="aboutGoods">
+                <div class="container">
+                    <nav class="aboutGoods__breadcrumbs">
+                        <a href="index.html">Главная</a>
+                        <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 10.5L18.5 5.5L13.5 0.5M18.5 5.5H0.5" stroke="#B3B3B3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <a href="menu.html">Меню</a>
+                        <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 10.5L18.5 5.5L13.5 0.5M18.5 5.5H0.5" stroke="#B3B3B3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <a href="menu.html">Баттер Чикен</a>
+                    </nav>
+                    <div class="aboutGoods__wrapp">
+                        <div class="aboutGoods__top">
+                            <div class="aboutGoods__title">
+                                <div class="aboutGoods__left">
+                                    <h1>Баттер Чикен</h1>
+                                    <p>250г</p>
+                                </div>
+                                <p class="aboutGoods__titlePrice">380 ₽</p>
+                            </div>
+                            <div class="aboutGoods__desc">
+                                <div class="aboutGoods__descTitle">
+                                    <p class="aboutGoods__titleTop">Нежное куриное филе в сливочно-томатном соусе с
+                                        мягкими
+                                        специями.
+                                        Классика, которую любят все</p>
+                                    <p class="aboutGoods__titleBottom">Калорийность: 290 ккал
+                                        Белки: 16 г | Жиры: 25 г | Углеводы: 2 г
+                                        Условия хранения: Продукт готов к употреблению. Рекомендуется употребить в
+                                        течение
+                                        3-х
+                                        часов с момента доставки.</p>
+                                </div>
+                                <p class="aboutGoods__descBottom">Мягкая острота</p>
+                            </div>
+                        </div>
+                        <div class="aboutGoods__bottom">
+                            <p class="aboutGoods__priceMobile">0 ₽</p>
+                            <img class="aboutGoods__img" src="img/main/food.png" alt="">
+                        </div>
+                        <div class="aboutGoods__bottomPrice">
+                            <div class="aboutGoods__price">0 ₽</div>
+                            <button class="btn-reset aboutGoods__add">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+</html>

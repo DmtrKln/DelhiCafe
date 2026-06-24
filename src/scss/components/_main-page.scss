@@ -251,6 +251,11 @@
 
 .goods {
   position: relative;
+  padding: 54px 0 0 0;
+
+  @include mobile {
+    padding: 60px 0 0 0;
+  }
 
 
   &__imgLeft {
@@ -306,7 +311,7 @@
   &__tab,
   &__tabMobile {
     padding: 12px 34px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid #ffbf57;
     border-radius: 32px;
     background: transparent;
     cursor: pointer;
@@ -315,8 +320,7 @@
     font-weight: 400;
     font-size: 18px;
     color: #fff;
-    transition: background-color 0.3s ease, border-color 0.3s ease,
-      color 0.3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
       border-color: $pink;
@@ -324,7 +328,7 @@
 
     &.active {
       background: $pink;
-      border-color: $pink;
+      border-color: transparent;
       color: #fff;
     }
   }
@@ -547,7 +551,7 @@
 
   &__moreBtn {
     padding: 10px 30px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid #ffbf57;
     border-radius: 32px;
     background: transparent;
     cursor: pointer;
@@ -567,6 +571,7 @@
     &:active {
       background: $text-grey;
       color: $dark-grey;
+      border-color: transparent;
     }
   }
 
@@ -609,6 +614,8 @@
     background-color: #b3b0b0;
   }
 }
+
+
 
 .about {
 
@@ -727,6 +734,7 @@
 
     &:active {
       background: $text-grey;
+      border-color: transparent;
       color: #fff;
     }
 
@@ -768,7 +776,7 @@
 
   &__swiperReviews {
     width: 100%;
-    padding: 41px 0 34px;
+    padding: 40px 0 30px;
 
     @include small-tablet {
       margin-bottom: 12px;
@@ -853,12 +861,8 @@
   &__swiperDesc {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
-
-    @include mobile {
-      font-size: 20px;
-    }
   }
 
   &__swiperTitle {
@@ -991,12 +995,11 @@
   &__title {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 38px;
+    font-size: 30px;  
+    text-align: center;
 
     @include mobile {
       font-size: 22px;
-      margin: 0;
     }
 
     color: #fff;
@@ -1028,6 +1031,8 @@
     cursor: pointer;
     transition: all 0.3 ease;
 
+    z-index: 999;
+
     &:hover {
       border-color: $pink;
     }
@@ -1054,20 +1059,17 @@
     }
   }
 
-  &__pagination {
-    display: none;
-
-    @include mobile {
-      display: block;
-    }
-  }
 
   &__pagination {
     position: static;
-    display: flex;
+    display: none;
     justify-content: center;
-    gap: 10px;
     margin-top: 20px;
+
+    @include mobile {
+      display: flex;
+      gap: 5px;
+    }
 
     .swiper-pagination-bullet {
       width: 26px;
@@ -1125,8 +1127,9 @@
   &__card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 40px 44px 58px 44px;
-    border: 1px solid rgba(255, 76, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 30px;
     background: #1a1a1a;
     height: 100%;
@@ -1134,6 +1137,12 @@
     @include mobile {
       padding: 40px 16px 40px 46px;
     }
+  }
+
+  &__desc{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
 
   &__cardHead {

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="menu ">
+        <div class="container">
+          <nav class="menu__breadcrumbs">
+            <a href="index.html">Главная</a>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.8535 6.35353L7.35351 9.85354C7.25975 9.9473 7.13258 9.99997 6.99999 9.99997C6.86739 9.99997 6.74023 9.9473 6.64647 9.85354C6.55271 9.75978 6.50004 9.63262 6.50004 9.50002C6.50004 9.36743 6.55271 9.24026 6.64647 9.1465L9.29296 6.50001H1.49999C1.36739 6.50001 1.24021 6.44733 1.14644 6.35357C1.05268 6.2598 1 6.13262 1 6.00002C1 5.86741 1.05268 5.74024 1.14644 5.64647C1.24021 5.5527 1.36739 5.50002 1.49999 5.50002H9.29296L6.64647 2.85353C6.55271 2.75977 6.50004 2.63261 6.50004 2.50001C6.50004 2.36742 6.55271 2.24025 6.64647 2.14649C6.74023 2.05273 6.86739 2.00006 6.99999 2.00006C7.13258 2.00006 7.25975 2.05273 7.35351 2.14649L10.8535 5.64651C10.8999 5.69292 10.9368 5.74803 10.9619 5.80869C10.9871 5.86934 11 5.93436 11 6.00002C11 6.06568 10.9871 6.13069 10.9619 6.19135C10.9368 6.252 10.8999 6.30711 10.8535 6.35353Z"
+                fill="#FBFBFB" fill-opacity="0.52" />
+            </svg>
+            <a href="menu.html">Меню</a>
+          </nav>
+          <h1 class="menu__title">Меню</h1>
+        </div>
+        <div class="menu__slider swiper">
+          <div class="menu__tabsMobile swiper-wrapper">
+            <div class="menu__tabMobile swiper-slide active" type="button" data-tab="curry">
+              Карри
+            </div>
+            <div class="menu__tabMobile swiper-slide" type="button" data-tab="snacks">
+              Закуски
+            </div>
+            <div class="menu__tabMobile swiper-slide" type="button" data-tab="naan">Наан</div>
+            <div class="menu__tabMobile swiper-slide" type="button" data-tab="drinks">
+              Напитки
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="menu__tabs ">
+            <div class="menu__tab active" type="button" data-tab="curry">
+              Карри
+            </div>
+            <div class="menu__tab" type="button" data-tab="snacks">
+              Закуски
+            </div>
+            <div class="menu__tab" type="button" data-tab="naan">Наан</div>
+            <div class="menu__tab" type="button" data-tab="drinks">
+              Напитки
+            </div>
+          </div>
+          <div class="menu__panels ">
+            <div class="menu__panel  active" data-panel="curry">
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu__panel " data-panel="snacks">
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Закуска</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Закуска</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Закуска</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu__panel " data-panel="naan">
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid 
+               list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Наан</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid 
+               list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu__panel " data-panel="drinks">
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Вода</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="menu__grid  list-reset">
+                <div class="menu__cardImg">
+                  <span class="menu__badge">хит</span>
+                  <div class="menu__foodWrapp">
+                    <img class="menu__food" src="img/main/food.png" alt="Баттер Чикен" />
+                  </div>
+                </div>
+                <div class="menu__cardBody">
+                  <div class="menu__cardHead">
+                    <h3 class="menu__cardTitle">Баттер Чикен</h3>
+                    <button class="menu__add btn-reset" type="button" aria-label="Добавить в корзину">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="menu__cardDesc">
+                    Нежное куриное филе в сливочно-томатном соусе с мягкими
+                    специями. Классика, которую любят все
+                  </p>
+                  <div class="menu__cardFooter">
+                    <p class="menu__weight">250 г</p>
+                    <p class="menu__price">380 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu__more">
+            <button class="menu__moreBtn" type="button">Больше блюд</button>
+          </div>
+        </div>
+      </section>
+      @include('partials/reviews.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

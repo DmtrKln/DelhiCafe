@@ -1,0 +1,350 @@
+.menu {
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 60px;
+
+        @include mobile {
+            font-size: 26px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 50px;
+        color: #fff;
+
+        @include mobile{
+            margin-bottom: 40px;
+        }
+
+        a {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 140%;
+            color: #fff;
+            transition: color 0.3s ease;
+
+            &:hover {}
+        }
+
+        span {
+            color: #fff;
+        }
+    }
+
+    position: relative;
+    margin-top: 172px;
+
+
+    @include mobile {
+        margin: 112px 0 0 0;
+    }
+
+
+    &__tabs,
+    &__tabsMobile {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+
+        @include mobile {
+            gap: 10px;
+            margin-bottom: 70px;
+        }
+    }
+
+    &__tabs {
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    // обёртка свайпера табов: без центрирования и gap,
+    // иначе при выключенном loop первый таб уезжает за левый край
+    &__tabsMobile {
+        @include mobile {
+            justify-content: flex-start;
+            gap: 0;
+        }
+    }
+
+    &__tab,
+    &__tabMobile {
+        padding: 12px 34px;
+        border: 1px solid #ffbf57;
+        border-radius: 32px;
+        background: transparent;
+        cursor: pointer;
+
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border-color: $pink;
+        }
+
+        &.active {
+            background: $pink;
+            border-color: transparent;
+            color: #fff;
+        }
+    }
+
+    &__swiperWrapp {
+        display: flex;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__slider {
+
+        display: none;
+        justify-content: start;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__panel {
+        gap: 40px;
+        display: none;
+        margin-bottom: 60px;
+
+        &.active {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    }
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 22px;
+        width: calc((100% - 120px) / 4);
+
+        @include maxdesktop {
+            width: calc((100% - 80px) / 3);
+
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+
+        @include tablet {
+            width: calc((100% - 40px) / 2);
+
+        }
+
+        @include small-tablet {
+            width: 100%;
+        }
+    }
+
+    &__swiperMobile {
+        overflow: visible;
+        display: none;
+
+        flex-direction: column;
+        gap: 20px;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 22px;
+
+    }
+
+    &__cardImg {
+        border-radius: 36px;
+        aspect-ratio: 358/388;
+        visibility: visible;
+
+        background: $dark-grey;
+        position: relative;
+
+        @include mobile {
+            aspect-ratio: auto;
+            height: 350px;
+            width: 100%;
+        }
+    }
+
+    &__foodWrapp {
+        aspect-ratio: 308/310;
+    }
+
+    &__food {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+        border: 8px solid #ffbf57;
+
+        overflow: visible;
+
+        aspect-ratio: 358 / 356;
+
+        @include mobile {
+            aspect-ratio: 308 / 310;
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: -5%;
+        right: 0;
+        z-index: 2;
+        padding: 5px 18px;
+        border-radius: 20px;
+        background: $pink;
+
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 22px;
+        color: #fff;
+
+        @include mobile {
+            font-size: 19px;
+        }
+    }
+
+    &__cardBody {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__cardHead {
+        position: relative;
+    }
+
+    &__cardTitle {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__add {
+        position: absolute;
+        top: -25%;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: $pink;
+        cursor: pointer;
+    }
+
+    &__cardDesc {
+        font-family: $second-family;
+        font-weight: 500;
+        font-size: 18px;
+        color: $text-grey;
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    &__cardFooter {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    &__weight {
+        font-family: $second-family;
+        font-weight: 500;
+        font-size: 18px;
+        color: $text-grey;
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    &__price {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+
+        @include mobile {
+            font-size: 17px;
+        }
+    }
+
+    &__more {
+        display: flex;
+        justify-content: center;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__moreBtn {
+        padding: 10px 30px;
+        border: 1px solid #ffbf57;
+        border-radius: 32px;
+        background: transparent;
+        cursor: pointer;
+
+        font-family: $second-family;
+        font-weight: 500;
+        font-size: 22px;
+        color: #fff;
+        transition: all 0.3s ease;
+        border: 1px solid linear-gradient(90deg, #edab78, #fff7f0, #af804a);
+
+        &:hover {
+            background-color: #fff;
+            color: $dark-grey;
+        }
+
+        &:active {
+            background: $text-grey;
+            color: $dark-grey;
+            border-color: transparent;
+        }
+    }
+
+}
