@@ -197,16 +197,69 @@ document.querySelectorAll(".goods__slider, .menu__slider").forEach((el) => {
 
 //aboutGoods
 
-const totalEl = document.querySelector('.aboutGoods__priceMobile'); // счётчик «0 ₽»
-let total = 0;
+const aboutGoods = document.querySelector(".aboutGoods");
 
-document.querySelector('.aboutGoods').addEventListener('click', (e) => {
-  const btn = e.target.closest('.aboutGoods__add');
-  if (!btn) return;
+if (aboutGoods) {
 
-  const priceText = document.querySelector('.aboutGoods__price').textContent; // «360 ₽»
-  const price = parseInt(priceText.replace(/\D/g, ''), 10);
+  const priceEl = aboutGoods.querySelector(".aboutGoods__titlePrice");
+  const unitPrice = priceEl
+    ? parseInt(priceEl.textContent.replace(/\D/g, ""), 10) || 0
+    : 0;
 
-  total += price;
-  totalEl.textContent = total + ' ₽';
+
+  const totalEls = aboutGoods.querySelectorAll(
+    ".aboutGoods__price"
+  );
+  let total = 0;
+
+  aboutGoods.addEventListener("click", (e) => {
+    if (!e.target.closest(".aboutGoods__add")) return;
+
+    total += unitPrice;
+    totalEls.forEach((el) => (el.textContent = total + " ₽"));
+  });
+}
+
+const items = document.querySelectorAll('.faq__listItem');
+
+items.forEach((item) => {
+  const header = item.querySelector('.faq__listHeader');
+  const content = item.querySelector('.faq__content');
+
+  header.addEventListener('click', () => {
+    header.classList.toggle('active');
+    const isOpen = content.classList.toggle('active');
+
+    if (isOpen) {
+      content.style.maxHeight = content.scrollHeight + 'px';  
+    } else {
+      content.style.maxHeight = '0';                          
+    }
+  });
 });
+
+let advantagesSwiper = null;
+const advantagesMedia = window.matchMedia("(max-width: 576px)");
+
+function initAdvantagesSwiper(e) {
+  if (e.matches) {
+    if (!advantagesSwiper) {
+      advantagesSwiper = new Swiper(".advantages__swiper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        pagination: {
+          el: ".advantages__pagination",
+          type: "progressbar",
+        },
+      });
+    }
+  } else if (advantagesSwiper) {
+    advantagesSwiper.destroy(true, true);
+    advantagesSwiper = null;
+  }
+}
+
+advantagesMedia.addEventListener("change", initAdvantagesSwiper);
+initAdvantagesSwiper(advantagesMedia);
+

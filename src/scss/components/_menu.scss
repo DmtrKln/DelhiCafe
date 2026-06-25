@@ -22,7 +22,7 @@
         margin-bottom: 50px;
         color: #fff;
 
-        @include mobile{
+        @include mobile {
             margin-bottom: 40px;
         }
 
@@ -31,10 +31,20 @@
             font-weight: 300;
             font-size: 18px;
             line-height: 140%;
-            color: #fff;
-            transition: color 0.3s ease;
+            color: $text-grey;
+            transition: all 0.3s ease;
 
-            &:hover {}
+            @include mobile {
+                font-size: 16px;
+            }
+
+            &:last-child {
+                color: #fff;
+            }
+
+            &:hover {
+                color: #fff;
+            }
         }
 
         span {

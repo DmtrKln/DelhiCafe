@@ -1,0 +1,261 @@
+.advantages {
+
+    &__wrapp {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    &__title {
+        display: flex;
+        gap: 24px;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        h2 {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: $pink;
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 18px;
+            color: $text-grey;
+
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 36px;
+        width: calc((100% - 64px)/3);
+
+        p {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $text-grey;
+        }
+    }
+
+    &__cardTitle {
+        display: flex;
+        gap: 16px;
+
+        align-items: center;
+
+        h3 {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 22px;
+            color: #fff;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 32px 32px;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__block {
+        border-radius: 16px;
+        padding: 10px;
+        width: 48px;
+        height: 48px;
+        background-color: $dark-grey;
+    }
+
+    &__swiper {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__pagination {
+        position: relative;
+        margin-top: 24px;
+        height: 6px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.3);
+
+        --swiper-pagination-color: #{$pink};
+
+        .swiper-pagination-progressbar-fill {
+            border-radius: 5px;
+        }
+    }
+}
+
+.faq {
+
+    margin: 150px 0 0 0;
+
+    @include mobile {
+        margin: 98px 0 0 0;
+    }
+
+    &__wrapp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        gap: 64px;
+
+        max-width: 800px;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-self: center;
+
+        p {
+
+
+            font-family: $font-family;
+            font-weight: 566;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: $pink;
+
+
+        }
+
+        h2 {
+            font-family: $font-family;
+            font-weight: 566;
+            font-size: 40px;
+            line-height: 110%;
+            text-align: center;
+            color: #fff;
+
+            @include mobile {
+                font-size: 22px;
+            }
+        }
+    }
+
+
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        div {
+            width: 20px;
+            height: 1px;
+            background-color: $pink;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 64px;
+    }
+
+    &__listTitle {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 24px;
+        color: $pink;
+        margin-bottom: 32px;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__listItem {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__listHeader {
+
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+
+        border-bottom: solid 1px #aaa;
+        padding-bottom: 24px;
+
+        &.active{
+            border-bottom: solid 0px transparent;
+        }
+
+
+        h3 {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 18px;
+            color: #ececec;
+
+            &:hover {
+                color: $pink;
+            }
+        }
+
+        svg {
+            align-self: center;
+            cursor: pointer;
+        }
+    }
+
+    &__content {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 24px 0 24px 0;
+
+        transition: all 0.3s ease;
+
+        p {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            color: #aaa;
+        }
+    }
+
+    &__content.active { 
+        opacity: 1;
+        overflow: hidden;
+        border-bottom: solid 1px #aaa;
+    }
+}

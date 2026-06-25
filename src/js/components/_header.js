@@ -17,7 +17,8 @@ const closeMenu = () => {
   document.body.classList.remove('overflow');
 };
 
-burger?.addEventListener('click', () => {
+burger?.addEventListener('click', (e) => {
+  e.stopPropagation();
   burger.classList.toggle(ACTIVE_CLASS);
   mobileMenu?.classList.toggle(ACTIVE_CLASS);
   document.body.classList.toggle('overflow');
@@ -31,8 +32,8 @@ const modals = document.querySelectorAll('.header__modal');
 const formModal = document.querySelector('.header__modal[data-modal="form"]');
 const successModal = document.querySelector('.header__modal[data-modal="success"]');
 const modalForm = document.querySelector('[data-modal-form]');
-const headerBtn = document.querySelector('.header__btn');
-const headerMobileTel = document.querySelector('.header__mobileTel');
+const connectBtn = document.querySelector('.header__connect');
+const mobileContactBtn = document.querySelector('.header__btnMobile');
 
 const openModal = (modal) => {
   if (!modal) return;
@@ -46,13 +47,13 @@ const closeModal = () => {
   document.body.classList.remove('overflow');
 };
 
-headerBtn?.addEventListener('click', (e) => {
+connectBtn?.addEventListener('click', (e) => {
   e.preventDefault();
   closeMenu();
   openModal(formModal);
 });
 
-headerMobileTel?.addEventListener('click', (e) => {
+mobileContactBtn?.addEventListener('click', (e) => {
   e.preventDefault();
   closeMenu();
   openModal(formModal);
