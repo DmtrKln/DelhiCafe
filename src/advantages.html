@@ -6,21 +6,51 @@
     <div class="site-container">
         @include('partials/header.html')
         <main class="main">
-            @include('partials/about.html')
+            <section class="about advantages" id="about">
+                <div class="container">
+                    <div class="about__wrapp">
+                        <div class="about__right">
+                            <div class="about__media">
+                                <img src="img/main/about.png" alt="Интерьер Delhi Cafe" />
+                            </div>
+                            <div class="about__content">
+                                <h2 class="about__label">О нас</h2>
+                                <div class="about__desc">
+                                    <p class="about__lead">
+                                        <span>Delhi Cafe</span> — это современный взгляд на
+                                        многогранные гастрономические традиции. Мы создали
+                                        комфортное и эстетичное пространство, где аутентичные вкусы
+                                        Индии встречаются с безупречным сервисом. Это место, где
+                                        приятно провести деловой обед, встретиться с друзьями или
+                                        насладиться неспешным ужином.
+                                    </p>
+                                    <p class="about__text">
+                                        Секрет нашего вкуса — в идеальном балансе. Мы не идём на
+                                        компромиссы: используем только свежие ингредиенты, чистые
+                                        составы и оригинальные специи, чтобы каждый гость мог
+                                        открыть для себя Индию заново.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="advantages">
+                <img src="img/main/atmosphere.png" alt="" class="advantages__imgRight">
                 <div class="container">
                     <div class="advantages__wrapp">
                         <div class="advantages__title">
-                            <h2>Наши преимущества</h2>
+                            <h2><span>Наши</span> преимущества</h2>
                             <p>Почему гости выбирают Delhi Cafe для своих лучших <br> моментов и
                                 гастрономических
                                 открытий</p>
                         </div>
                         <div class="advantages__swiper swiper">
                             <div class="swiper-wrapper">
-                                <div class="advantages__card swiper-slide">
-                                    <div class="advantages__cardTitle">
-                                        <div class="advantages__block">
+                                <div class="advantages__cardSwiper swiper-slide">
+                                    <div class="advantages__cardTitleSwiper">
+                                        <div class="advantages__blockSwiper">
                                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -33,9 +63,9 @@
                                     <p>Традиционные индийские рецепты, передаваемые из поколения в поколение
                                         для истинного вкуса наследия.</p>
                                 </div>
-                                <div class="advantages__card swiper-slide">
-                                    <div class="advantages__cardTitle">
-                                        <div class="advantages__block">
+                                <div class="advantages__cardSwiper swiper-slide">
+                                    <div class="advantages__cardTitleSwiper">
+                                        <div class="advantages__blockSwiper">
                                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -48,9 +78,9 @@
                                     <p>Отобранные вручную специи, доставляемые напрямую из Индии каждую неделю для
                                         сохранения аромата.</p>
                                 </div>
-                                <div class="advantages__card swiper-slide">
-                                    <div class="advantages__cardTitle">
-                                        <div class="advantages__block">
+                                <div class="advantages__cardSwiper swiper-slide">
+                                    <div class="advantages__cardTitleSwiper">
+                                        <div class="advantages__blockSwiper">
                                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -63,9 +93,9 @@
                                     <p>Погружающая атмосфера и современный дизайн, переносящие гостей в самое сердце
                                         современной Индии.</p>
                                 </div>
-                                <div class="advantages__card swiper-slide">
-                                    <div class="advantages__cardTitle">
-                                        <div class="advantages__block">
+                                <div class="advantages__cardSwiper swiper-slide">
+                                    <div class="advantages__cardTitleSwiper">
+                                        <div class="advantages__blockSwiper">
                                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -78,9 +108,9 @@
                                     <p>Традиционные индийские рецепты, передаваемые из поколения в поколение
                                         для истинного вкуса наследия.</p>
                                 </div>
-                                <div class="advantages__card swiper-slide">
-                                    <div class="advantages__cardTitle">
-                                        <div class="advantages__block">
+                                <div class="advantages__cardSwiper swiper-slide">
+                                    <div class="advantages__cardTitleSwiper">
+                                        <div class="advantages__blockSwiper">
                                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -93,9 +123,9 @@
                                     <p>Отобранные вручную специи, доставляемые напрямую из Индии каждую неделю для
                                         сохранения аромата.</p>
                                 </div>
-                                <div class="advantages__card swiper-slide">
-                                    <div class="advantages__cardTitle">
-                                        <div class="advantages__block">
+                                <div class="advantages__cardSwiper swiper-slide">
+                                    <div class="advantages__cardTitleSwiper">
+                                        <div class="advantages__blockSwiper">
                                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -109,7 +139,7 @@
                                         современной Индии.</p>
                                 </div>
                             </div>
-                            <div class="advantages__pagination swiper-pagination"></div>
+                            <div class="advantages__paginationSwiper swiper-pagination"></div>
                         </div>
                         <div class="advantages__cards">
                             <div class="advantages__card">
@@ -207,6 +237,7 @@
                 </div>
             </section>
             <section class="faq">
+                <img src="img/main/faq.png" alt="" class="faq__imgLeft">
                 <div class="container">
                     <div class="faq__wrapp">
                         <div class="faq__top">
@@ -223,11 +254,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Есть ли у вас доставка?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -241,11 +271,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Каков радиус доставки?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -259,11 +288,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Минимальная сумма заказа?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -277,11 +305,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Сколько времени занимает доставка?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -297,11 +324,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Есть ли у вас сезонные напитки?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -316,11 +342,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Могу ли я изменить состав заказа?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -335,11 +360,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Есть ли веганские / безлактозные варианты?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -358,11 +382,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Где вы находитесь?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -376,11 +399,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Какие у вас часы работы?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>
@@ -393,11 +415,10 @@
                                 <li class="faq__listItem">
                                     <div class="faq__listHeader">
                                         <h3>Есть ли поблизости парковка?</h3>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="white"
-                                                stroke-width="2" stroke-linecap="round" />
-                                        </svg>
+                                        <div class="faq__plus">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="faq__content">
                                         <p>

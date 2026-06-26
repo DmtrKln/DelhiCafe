@@ -1,0 +1,403 @@
+.contact {
+    margin: 172px 0 0 0;
+
+    &__breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 60px;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+
+        a {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 140%;
+            color: $text-grey;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+
+            @include mobile {
+                font-size: 16px;
+            }
+
+            &:last-child {
+                color: #fff;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+    }
+
+    @include mobile {
+        margin: 112px 0 0 0;
+    }
+
+    &__wrapp {
+        display: flex;
+        gap: 70px;
+
+
+        @media (max-width: 1300px) {
+            flex-wrap: wrap;
+        }
+
+        @include mobile {
+            gap: 38px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        width: calc(100% - 35px);
+
+        h2 {
+            font-family: $font-family;
+            font-weight: 566;
+            font-size: 26px;
+            text-transform: uppercase;
+            color: $pink;
+        }
+
+        iframe {
+            width: 100%;
+            border-radius: 30px;
+            max-height: 378px;
+        }
+
+        @media (max-width: 1300px) {
+            width: 100%;
+        }
+
+        @include mobile {
+            gap: 30px;
+        }
+    }
+
+    &__leftTop {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 60px;
+
+        @include mobile {
+            gap: 30px;
+        }
+    }
+
+    &__call {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @media (max-width: 1300px) {
+            justify-content: start;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__callLeft {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 130%;
+            color: #fff;
+
+            margin-bottom: 26px;
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__callRight {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        h3 {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 130%;
+            color: #fff;
+        }
+
+        p {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+
+    &__tell {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 18px;
+
+        a {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        svg {
+            &:hover path {
+                fill: $pink;
+            }
+        }
+    }
+
+    &__right {
+        width: calc(100% - 35px);
+        padding: 40px;
+        position: relative;
+        box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.1);
+        background: #1a1a1a;
+        border: 1px solid #fff;
+        border-radius: 30px;
+
+        @include mobile {
+            padding: 24px 20px;
+        }
+
+        @media (max-width: 1300px) {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 30px;
+
+        @include mobile {
+            margin-bottom: 15px;
+        }
+
+
+    }
+
+    &__btn {
+        background-color: $pink;
+        width: 100%;
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 18px;
+        color: #fff;
+        padding: 17px 0;
+        border-radius: 14px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #fff;
+            color: $pink;
+        }
+
+        &:active {
+            background-color: #646464;
+            color: #fff;
+        }
+    }
+
+    &__formTitle {
+        h2 {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 32px;
+            color: $pink;
+            margin-bottom: 10px;
+
+            @include mobile {
+                font-size: 26px;
+            }
+        }
+
+        p {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: #dfdfdf;
+            margin-bottom: 24px;
+
+            @include mobile {
+                margin-bottom: 16px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+            }
+        }
+    }
+
+    &__cross {
+        cursor: pointer;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        z-index: 99999;
+    }
+
+    &__group {
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+
+        @include maxdesktop {
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+    }
+
+    &__label {
+        font-family: $font-family;
+        font-weight: 556;
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    &__input {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 15px;
+        color: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 13px 16px;
+        box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.1);
+        background: #1a1a1a;
+
+    }
+
+    &__input::placeholder {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 15px;
+        color: #bbb;
+
+    }
+
+    textarea {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 15px;
+        color: #fff;
+        padding: 14px 0 104px 16px;
+        height: 140px;
+        overflow: hidden;
+
+        &::placeholder {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 15px;
+            color: #bbb;
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+
+    .contact__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 22px;
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+
+    .contact__checkboxInput {
+        appearance: none;
+        -webkit-appearance: none;
+        margin: 0;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        background-color: transparent;
+        cursor: pointer;
+        display: grid;
+        place-content: center;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    &__checkboxInput::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        transform: scale(0);
+        transition: transform 0.15s ease;
+        background-color: transparent;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    }
+
+    &__checkboxInput:checked {
+        background-color: transparent;
+        border-color: #fff;
+    }
+
+    &__checkboxInput:checked::before {
+        transform: scale(1);
+        background-color: #fff;
+    }
+
+    &__checkboxInput:focus-visible {
+        outline-offset: 2px;
+    }
+
+    &__checkboxLabel {
+        color: #fff;
+        user-select: none;
+
+        font-family: $font-family;
+        font-weight: 200;
+        font-size: 14px;
+        color: #fff;
+
+        a {
+            font-family: $font-family;
+            font-weight: 200;
+            font-size: 14px;
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+}

@@ -62,7 +62,7 @@ document.addEventListener("click", (e) => {
   if (cartCount) cartCount.textContent = cartItems;
 });
 
-const swiper = new Swiper(".delivery-slider", {
+const swiper = new Swiper(".promoCards-slider", {
   slidesPerView: 1,
   centeredSlides: true,
   loop: true,
@@ -83,7 +83,7 @@ const swiper = new Swiper(".delivery-slider", {
   },
 
   pagination: {
-    el: ".delivery__pagination",
+    el: ".promoCards__pagination",
     clickable: true,
   },
 });
@@ -222,21 +222,25 @@ if (aboutGoods) {
 
 const items = document.querySelectorAll('.faq__listItem');
 
+
 items.forEach((item) => {
   const header = item.querySelector('.faq__listHeader');
   const content = item.querySelector('.faq__content');
+  const plus = item.querySelector('.faq__plus')
 
   header.addEventListener('click', () => {
     header.classList.toggle('active');
+    plus.classList.toggle('active')
     const isOpen = content.classList.toggle('active');
 
     if (isOpen) {
-      content.style.maxHeight = content.scrollHeight + 'px';  
+      content.style.maxHeight = content.scrollHeight + 24 + 'px';  
     } else {
       content.style.maxHeight = '0';                          
     }
   });
 });
+
 
 let advantagesSwiper = null;
 const advantagesMedia = window.matchMedia("(max-width: 576px)");
@@ -246,10 +250,12 @@ function initAdvantagesSwiper(e) {
     if (!advantagesSwiper) {
       advantagesSwiper = new Swiper(".advantages__swiper", {
         slidesPerView: 1,
-        spaceBetween: 24,
         loop: true,
+        spaceBetween: 30,
+        observer: true,
+        observeParents: true,
         pagination: {
-          el: ".advantages__pagination",
+          el: ".advantages__paginationSwiper",
           type: "progressbar",
         },
       });
@@ -262,4 +268,3 @@ function initAdvantagesSwiper(e) {
 
 advantagesMedia.addEventListener("change", initAdvantagesSwiper);
 initAdvantagesSwiper(advantagesMedia);
-

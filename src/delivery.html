@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <section class="delivery">
+                <div class="container">
+                    <nav class="contact__breadcrumbs">
+                        <a href="index.html">Главная</a>
+                        <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 10.5L18.5 5.5L13.5 0.5M18.5 5.5H0.5" stroke="#B3B3B3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <a href="menu.html">Контакты</a>
+                    </nav>
+                    <div class="delivery__wrapp">
+                        <div class="delivery__title">
+                            <h1>Доставка пряных впечатлений</h1>
+                            <h2>Привезем атмосферу и вкус настоящей Индии к вам домой или в офис</h2>
+                        </div>
+                        <div class="delivery__left">
+                            <div class="delivery__wrappCard">
+                                <div class="delivery__cards">
+                                    <div class="delivery__card">
+                                        <div class="delivery__box">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12.6676 5.66704V12.6676L17.3346 15.0011M24.3352 12.6676C24.3352 19.1114 19.1114 24.3352 12.6676 24.3352C6.22376 24.3352 1 19.1114 1 12.6676C1 6.22376 6.22376 1 12.6676 1C19.1114 1 24.3352 6.22376 24.3352 12.6676Z"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <h3>Время доставки</h3>
+                                        <p>от 45 минут</p>
+                                    </div>
+                                </div>
+                                <p>Часы приема заказов на доставку: Ежедневно с 11:00 до 22:30</p>
+                            </div>
+                            <div class="delivery__pay">
+                                <h3>ОПЛАТА ЗАКАЗА</h3>
+                                <ul>
+                                    <li>
+                                        <p>Как можно оплатить заказ?</p>
+                                    </li>
+                                    <li>
+                                        <p>Онлайн на сайте: Картой, СБП или Pay-сервисами при оформлении заказа. Это
+                                            быстро и безопасно</p>
+                                    </li>
+                                    <li>
+                                        <p>Курьеру при получении: Наличными или банковской картой (у всех наших курьеров
+                                            есть терминалы).</p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Нужна сдача с крупной купюры? Пожалуйста, укажите это в комментариях к
+                                            заказу.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <iframe class="delivery__right" src="https://yandex.ru/map-widget/v1/?ll=73.384529%2C54.982098&z=13.44" width="560"
+                            height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+</html>
