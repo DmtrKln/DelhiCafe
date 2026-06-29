@@ -234,9 +234,9 @@ items.forEach((item) => {
     const isOpen = content.classList.toggle('active');
 
     if (isOpen) {
-      content.style.maxHeight = content.scrollHeight + 24 + 'px';  
+      content.style.maxHeight = content.scrollHeight + 24 + 'px';
     } else {
-      content.style.maxHeight = '0';                          
+      content.style.maxHeight = '0';
     }
   });
 });
@@ -268,3 +268,15 @@ function initAdvantagesSwiper(e) {
 
 advantagesMedia.addEventListener("change", initAdvantagesSwiper);
 initAdvantagesSwiper(advantagesMedia);
+
+//delivery - mobile swipper
+
+const deliverySwipper = new Swiper(".delivery__swiper", {
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: 1.2,
+  pagination: {
+    el: ".delivery__pagination",
+    type: "progressbar",
+  },
+})

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <section class="emptyCart">
+                <div class="container">
+                    <nav class="contact__breadcrumbs">
+                        <a href="index.html">Главная</a>
+                        <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 10.5L18.5 5.5L13.5 0.5M18.5 5.5H0.5" stroke="#B3B3B3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <a href="emptyCart.html">Корзина</a>
+                    </nav>
+                    <div class="emptyCart__wrapp">
+                        <div class="emptyCart__inner">
+                            <div class="emptyCart__logo">
+                                <svg width="72" height="72" viewBox="0 0 72 72" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_79_18)">
+                                        <path
+                                            d="M18.6086 18.7204H13.6726C8.42587 18.7204 5.80467 18.7204 3.93856 19.7872C2.30098 20.7233 1.04217 22.202 0.384843 23.9656C-0.363744 25.9742 0.0671495 28.5507 0.928629 33.7018L0.930431 33.7115L4.69842 56.242C5.33761 60.064 5.6593 61.9758 6.61622 63.4099C7.45974 64.674 8.6438 65.6734 10.0337 66.2948C11.6104 66.9997 13.5536 67 17.4416 67H52.0737C55.9617 67 57.9036 66.9997 59.4804 66.2948C60.8702 65.6734 62.0552 64.674 62.8987 63.4099C63.8556 61.9758 64.1756 60.064 64.8148 56.242L68.5828 33.7115L68.5865 33.6958C69.4473 28.5487 69.878 25.9734 69.1297 23.9656C68.4723 22.202 67.2165 20.7233 65.5789 19.7872C63.7128 18.7204 61.0873 18.7204 55.8406 18.7204H50.9056M18.6086 18.7204H50.9056M18.6086 18.7204C18.6086 9.8324 25.8386 2.62723 34.7571 2.62723C43.6757 2.62723 50.9056 9.8324 50.9056 18.7204"
+                                            stroke="#FF4CFF" stroke-width="2.48266" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_79_18">
+                                            <rect width="72" height="72" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="emptyCart__title">
+                                <h1>Ваша корзина пока пуста</h1>
+                                <h2>Самое время наполнить её ароматами настоящей Индии. Посмотрите наше меню - там много
+                                    вкусного!</h2>
+                            </div>
+                            <a href="menu.html">Перейти в меню</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+</html>

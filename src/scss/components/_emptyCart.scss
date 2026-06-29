@@ -1,0 +1,135 @@
+.emptyCart {
+
+    margin-top: 172px;
+
+
+    @include mobile {
+        margin-top: 112px;
+    }
+
+    &__breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 88px;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+
+        a {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 140%;
+            color: $text-grey;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+
+            @include mobile {
+                font-size: 16px;
+            }
+
+            &:last-child {
+                color: #fff;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+    }
+
+    &__wrapp {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+
+        max-width: 760px;
+
+        a {
+            font-family: $font-family;
+            font-weight: 566;
+            font-size: 16px;
+            color: #fff;
+            padding: 18px 28px;
+            width: fit-content;
+
+            box-shadow: 0 10px 24px -6px rgba(233, 30, 140, 0.2);
+            background: $pink;
+            border-radius: 15px;
+            transition: .3s all ease;
+            border: 1px solid transparent;
+
+            &:hover {
+                border: 1px solid $pink;
+                background-color: #fff;
+                color: $pink;
+            }
+
+            &:active {
+                background: $text-grey;
+                border-color: transparent;
+                color: #fff;
+            }
+        }
+
+
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $pink;
+        border-radius: 80px;
+        padding: 44px;
+        width: fit-content;
+
+        @include mobile {
+
+            padding: 28px;
+
+            svg {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        h1 {
+            font-family: $font-family;
+            font-weight: 566;
+            font-size: 44px;
+            line-height: 110%;
+            text-align: center;
+            color: #fff;
+
+            @include mobile {
+                font-size: 30px;
+            }
+        }
+
+        h2 {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            text-align: center;
+            color: #cacaca;
+        }
+    }
+
+}

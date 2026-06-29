@@ -1,0 +1,99 @@
+.cart {
+
+    &__breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 60px;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+
+        a {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 140%;
+            color: $text-grey;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+
+            @include mobile {
+                font-size: 16px;
+            }
+
+            &:last-child {
+                color: #fff;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &__wrapp {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        h1 {
+            font-family: $font-family;
+            font-weight: 566;
+            font-size: 30px;
+            color: #fff;
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__left {
+        width: calc(70% - 30px);
+    }
+
+    &__right {
+        width: calc(30% - 30px);
+        padding: 36px 62px 32px 62px;
+        background: $dark-grey;
+    }
+
+    &__cards {}
+
+    &__card {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 0;
+
+        h3 {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 22px;
+            color: #fff;
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-family: $second-family;
+            font-weight: 500;
+            font-size: 18px;
+            color: $text-grey;
+
+            @include mobile{
+                font-size: 16px;
+            }
+        }
+    }
+}
