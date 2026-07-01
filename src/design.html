@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="design">
+        <h1>Оформление заказа</h1>
+        <div class="design__left">
+          <form action="" class="design__formContact">
+            <h2>Контактныйе данные</h2>
+            <div class="design__group">
+              <label for="nameContact " class="design__labelContact">Имя</label>
+              <input id="nameContact" type="text" class="design__input__label" placeholder="Ваше имя" />
+              <label for="textContact" class="design__labelContact">Телефон</label>
+              <input id="telContact" type="tel" class="design__input__label" placeholder="Телефон" />
+            </div>
+            <label for="emailContact" class="design__labelContact">Email</label>
+            <input id="emailContact" type="email" class="design__input__label" placeholder="name@company.ru" />
+          </form>
+          <form action="" class="design__formDelivery">
+            <h2>Адрес доставки</h2>
+            <label for="streatDelivery" class="design__labelDelivery">Улица <span>*</span></label>
+            <input id="streatDelivery" type="text" class="design__input__label"
+              placeholder="Начните вводить улицу..." />
+            <div class="design__groupTopDelivery">
+              <label for="houseDelivery" class="design__labelDelivery">Дом <span>*</span></label>
+              <input id="houseDelivery" type="text" class="design__input__label" placeholder="1А" />
+              <label for="addressDelivery" class="design__labelDelivery">Квартира / Офис</label>
+              <input id="addressDelivery" type="text" class="design__input__label" placeholder="Кв. или офис" />
+            </div>
+            <div class="design__groupBottomDelivery">
+              <label for="etranceDelivery" class="design__labelEtrance">Подъезд <span>*</span></label>
+              <input id="etranceDelivery" type="text" class="design__input__label" placeholder="1" />
+              <label for="floorDelivery" class="design__labelDelivery">Этаж</label>
+              <input id="floorDelivery" type="text" class="design__input__label" placeholder="5" />
+            </div>
+            <label for="commentDelivery" class="reservation__label">Комментарий к заказу</label>
+            <textarea type="text" class="reservation__input" id="commentDelivery"
+              placeholder="Например: домофон не работает, позвоните как приедете" required></textarea>
+          </form>
+          <form action="" class="form__time">
+            <h3>Время доставки</h3>
+          </form>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

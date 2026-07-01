@@ -18,33 +18,138 @@
                     </nav>
                     <div class="cart__wrapp">
                         <h1>Корзина</h1>
-                        <div class="cart__cards">
-                            <div class="cart__card">
-                                <img src="img/main/food.png" alt="">
-                                <div class="cart__title">
-                                    <h3>Баттер Чикен</h3>
-                                    <p>Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
-                                        Классика, которую любят все</p>
-                                    <p>250 г</p>
+                        <div class="cart__order">
+                            <div class="cart__left">
+                                <div class="cart__cards">
+                                    <div class="cart__card">
+                                        <img src="img/main/food.png" alt="">
+                                        <div class="cart__other">
+                                            <div class="cart__title">
+                                                <div class="cart__name">
+                                                    <h3>Баттер Чикен</h3>
+                                                    <p class="cart__wightMobile">250 г</p>
+                                                </div>
+                                                <p>Нежное куриное филе в сливочно-томатном соусе с мягкими
+                                                    специями.
+                                                    Классика, которую любят все</p>
+                                                <p class="cart__wight">250 г</p>
+                                            </div>
+                                            <div class="cart__sum">
+                                                <div class="cart__counter">
+                                                    <button class="cart__plus btn-reset">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M5.98 14.56V0H8.58V14.56H5.98ZM0 8.58V5.98H14.56V8.58H0Z"
+                                                                fill="white" />
+                                                        </svg>
+                                                    </button>
+                                                    <div class="cart__quantitly">1</div>
+                                                    <button class="cart__minus btn-reset">
+                                                        <span></span>
+                                                    </button>
+                                                </div>
+                                                <svg class="cart__basket" width="22" height="24" viewBox="0 0 22 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.25 4.5V19.25C3.25 20.6501 3.25 21.3497 3.52248 21.8845C3.76217 22.3549 4.14434 22.7381 4.61475 22.9778C5.149 23.25 5.84874 23.25 7.24614 23.25H14.2539C15.6513 23.25 16.35 23.25 16.8842 22.9778C17.3546 22.7381 17.7381 22.3549 17.9778 21.8845C18.25 21.3502 18.25 20.6513 18.25 19.2539V4.5M3.25 4.5H5.75M3.25 4.5H0.75M5.75 4.5H15.75M5.75 4.5C5.75 3.33515 5.75 2.75301 5.9403 2.29358C6.19404 1.68101 6.6804 1.19404 7.29297 0.940301C7.7524 0.75 8.33515 0.75 9.5 0.75H12C13.1649 0.75 13.7473 0.75 14.2067 0.940301C14.8193 1.19404 15.3058 1.68101 15.5596 2.29358C15.7499 2.75301 15.75 3.33515 15.75 4.5M15.75 4.5H18.25M18.25 4.5H20.75"
+                                                        stroke="#B3B3B3" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                                <div class="cart__price">380 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart__card">
+                                        <img src="img/main/food.png" alt="">
+                                        <div class="cart__other">
+                                            <div class="cart__title">
+                                                <h3>Баттер Чикен</h3>
+                                                <p>Нежное куриное филе в сливочно-томатном соусе с мягкими
+                                                    специями.
+                                                    Классика, которую любят все</p>
+                                                <p>250 г</p>
+                                            </div>
+                                            <div class="cart__sum">
+                                                <div class="cart__counter">
+                                                    <button class="cart__plus btn-reset">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M5.98 14.56V0H8.58V14.56H5.98ZM0 8.58V5.98H14.56V8.58H0Z"
+                                                                fill="white" />
+                                                        </svg>
+                                                    </button>
+                                                    <div class="cart__quantitly">1</div>
+                                                    <button class="cart__minus btn-reset">
+                                                        <span></span>
+                                                    </button>
+                                                </div>
+                                                <svg class="cart__basket" width="22" height="24" viewBox="0 0 22 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.25 4.5V19.25C3.25 20.6501 3.25 21.3497 3.52248 21.8845C3.76217 22.3549 4.14434 22.7381 4.61475 22.9778C5.149 23.25 5.84874 23.25 7.24614 23.25H14.2539C15.6513 23.25 16.35 23.25 16.8842 22.9778C17.3546 22.7381 17.7381 22.3549 17.9778 21.8845C18.25 21.3502 18.25 20.6513 18.25 19.2539V4.5M3.25 4.5H5.75M3.25 4.5H0.75M5.75 4.5H15.75M5.75 4.5C5.75 3.33515 5.75 2.75301 5.9403 2.29358C6.19404 1.68101 6.6804 1.19404 7.29297 0.940301C7.7524 0.75 8.33515 0.75 9.5 0.75H12C13.1649 0.75 13.7473 0.75 14.2067 0.940301C14.8193 1.19404 15.3058 1.68101 15.5596 2.29358C15.7499 2.75301 15.75 3.33515 15.75 4.5M15.75 4.5H18.25M18.25 4.5H20.75"
+                                                        stroke="#B3B3B3" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                                <div class="cart__price">380 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart__card">
+                                        <img src="img/main/food.png" alt="">
+                                        <div class="cart__other">
+                                            <div class="cart__title">
+                                                <h3>Баттер Чикен</h3>
+                                                <p>Нежное куриное филе в сливочно-томатном соусе с мягкими
+                                                    специями.
+                                                    Классика, которую любят все</p>
+                                                <p>250 г</p>
+                                            </div>
+                                            <div class="cart__sum">
+                                                <div class="cart__counter">
+                                                    <button class="cart__plus btn-reset">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M5.98 14.56V0H8.58V14.56H5.98ZM0 8.58V5.98H14.56V8.58H0Z"
+                                                                fill="white" />
+                                                        </svg>
+                                                    </button>
+                                                    <div class="cart__quantitly">1</div>
+                                                    <button class="cart__minus btn-reset">
+                                                        <span></span>
+                                                    </button>
+                                                </div>
+                                                <svg class="cart__basket" width="22" height="24" viewBox="0 0 22 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.25 4.5V19.25C3.25 20.6501 3.25 21.3497 3.52248 21.8845C3.76217 22.3549 4.14434 22.7381 4.61475 22.9778C5.149 23.25 5.84874 23.25 7.24614 23.25H14.2539C15.6513 23.25 16.35 23.25 16.8842 22.9778C17.3546 22.7381 17.7381 22.3549 17.9778 21.8845C18.25 21.3502 18.25 20.6513 18.25 19.2539V4.5M3.25 4.5H5.75M3.25 4.5H0.75M5.75 4.5H15.75M5.75 4.5C5.75 3.33515 5.75 2.75301 5.9403 2.29358C6.19404 1.68101 6.6804 1.19404 7.29297 0.940301C7.7524 0.75 8.33515 0.75 9.5 0.75H12C13.1649 0.75 13.7473 0.75 14.2067 0.940301C14.8193 1.19404 15.3058 1.68101 15.5596 2.29358C15.7499 2.75301 15.75 3.33515 15.75 4.5M15.75 4.5H18.25M18.25 4.5H20.75"
+                                                        stroke="#B3B3B3" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                                <div class="cart__price">380 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="cart__counter">
-                                    <button class="cart__plus">
-                                        <span></span>
-                                        <span></span>
-                                    </button>
-                                    <div class="cart__quantitly">1</div>
-                                    <button class="cart__minus">
-                                        <span></span>
-                                    </button>
+                            </div>
+                            <div class="cart__right">
+                                <h3>Состав заказа</h3>
+                                <div class="cart__bottom">
+                                    <div class="cart__info">
+                                        <p class="cart__position">Итого: <span>3</span> позиции</p>
+                                        <p class="cart__total">Сумма: <span>1140 ₽</span></p>
+                                    </div>
+                                    <div class="cart__details">
+                                        <p class="cart__detailsTotal">Сумма: <span>1140 ₽</span></p>
+                                        <p class="cart__delivery">Доставка: <span>200 ₽</span></p>
+                                    </div>
+                                    <div class="cart__play">
+                                        <div class="cart__totalAmount">К оплате: <span>1340 ₽</span></div>
+                                        <button class="btn-reset">Оформить заказ</button>
+                                    </div>
                                 </div>
-                                <svg width="22" height="24" viewBox="0 0 22 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M3.25 4.5V19.25C3.25 20.6501 3.25 21.3497 3.52248 21.8845C3.76217 22.3549 4.14434 22.7381 4.61475 22.9778C5.149 23.25 5.84874 23.25 7.24614 23.25H14.2539C15.6513 23.25 16.35 23.25 16.8842 22.9778C17.3546 22.7381 17.7381 22.3549 17.9778 21.8845C18.25 21.3502 18.25 20.6513 18.25 19.2539V4.5M3.25 4.5H5.75M3.25 4.5H0.75M5.75 4.5H15.75M5.75 4.5C5.75 3.33515 5.75 2.75301 5.9403 2.29358C6.19404 1.68101 6.6804 1.19404 7.29297 0.940301C7.7524 0.75 8.33515 0.75 9.5 0.75H12C13.1649 0.75 13.7473 0.75 14.2067 0.940301C14.8193 1.19404 15.3058 1.68101 15.5596 2.29358C15.7499 2.75301 15.75 3.33515 15.75 4.5M15.75 4.5H18.25M18.25 4.5H20.75"
-                                        stroke="#B3B3B3" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <div class="cart__price">380 ₽</div>
                             </div>
                         </div>
                     </div>
