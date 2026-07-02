@@ -307,15 +307,17 @@
             padding: 14px 26px;
             border-radius: 999px;
             width: fit-content;
+            border: 1px solid transparent;
 
             &:hover {
                 background-color: #fff;
-                color: $dark-grey;
+                border: 1px solid $pink;
+                color: $pink;
             }
 
             &:active {
-                background: $text-grey;
-                color: $dark-grey;
+                background-color: $text-grey;
+                color: #fff;
                 border-color: transparent;
             }
         }

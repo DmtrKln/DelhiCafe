@@ -14,7 +14,11 @@
         top: -70%;
         height: 1024px;
 
-        z-index: -99    ;
+        z-index: -2;
+
+        @media (max-width: 1900px) {
+            display: none;
+        }
     }
 
 
@@ -65,17 +69,17 @@
 
     //Мобильный свайпер
 
-    // &__cardSwiper {
-    //     position: 40px;
-    // }
-
     &__cardSwiper {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        padding: 40px;
+        padding: 40px 40px 64px;
         border: 1px solid rgba(255, 255, 255, 0.13);
         border-radius: 36px;
+
+        @include mobile{
+            padding: 40px;
+        }
 
         p {
             font-family: $font-family;
@@ -88,7 +92,7 @@
 
     &__cardTitleSwiper {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 16px;
 
         h3 {
@@ -110,6 +114,8 @@
 
     &__swiper {
         display: none;
+        width: 100%;
+        min-width: 0;
 
         @include mobile {
             display: block;
@@ -118,7 +124,7 @@
 
     &__paginationSwiper {
         position: relative;
-        margin-top: 24px;
+        margin-top: 20px;
         height: 6px;
         border-radius: 5px;
         background: rgba(255, 255, 255, 0.3);
@@ -144,6 +150,7 @@
         padding: 40px;
         border: 1px solid rgba(255, 255, 255, 0.13);
         border-radius: 36px;
+        background-color: #1a1a1a;
         width: calc((100% - 64px)/3);
 
         p {
@@ -209,11 +216,17 @@
         margin: 98px 0 0 0;
     }
 
-    &__imgLeft{
+    &__imgLeft {
         position: absolute;
         height: 1444px;
         top: 0;
         left: 0;
+
+        z-index: -1;
+
+        @media (max-width: 1600px) {
+            display: none;
+        }
     }
 
     &__wrapp {

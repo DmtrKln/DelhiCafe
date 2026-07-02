@@ -7,43 +7,176 @@
     @include('partials/header.html')
     <main class="main">
       <section class="design">
-        <h1>Оформление заказа</h1>
-        <div class="design__left">
-          <form action="" class="design__formContact">
-            <h2>Контактныйе данные</h2>
-            <div class="design__group">
-              <label for="nameContact " class="design__labelContact">Имя</label>
-              <input id="nameContact" type="text" class="design__input__label" placeholder="Ваше имя" />
-              <label for="textContact" class="design__labelContact">Телефон</label>
-              <input id="telContact" type="tel" class="design__input__label" placeholder="Телефон" />
+        <div class="container">
+          <nav class="cart__breadcrumbs">
+            <a href="index.html">Главная</a>
+            <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 10.5L18.5 5.5L13.5 0.5M18.5 5.5H0.5" stroke="#B3B3B3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <a href="cart.html">Корзина</a>
+            <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 10.5L18.5 5.5L13.5 0.5M18.5 5.5H0.5" stroke="#B3B3B3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <a href="design.html">Оформление заказа</a>
+          </nav>
+          <div class="design__wrapp">
+            <h1>Оформление заказа</h1>
+            <div class="design__order">
+              <div class="design__left">
+                <form action="" class="design__card design__formContact">
+                  <h2 class="design__cardTitle">Контактные данные</h2>
+                  <div class="design__bottom">
+                    <div class="design__group">
+                      <div class="design__field">
+                        <label for="nameContact" class="design__label">Имя</label>
+                        <input id="nameContact" type="text" class="design__input" placeholder="Ваше имя" />
+                      </div>
+                      <div class="design__field">
+                        <label for="telContact" class="design__label">Телефон</label>
+                        <input id="telContact" type="tel" class="design__input" placeholder="+7 (___) ___-__-__" />
+                      </div>
+                    </div>
+                    <div class="design__field">
+                      <label for="emailContact" class="design__label">Email</label>
+                      <input id="emailContact" type="email" class="design__input" placeholder="name@company.ru" />
+                    </div>
+                  </div>
+                </form>
+                <form action="" class="design__card design__formDelivery">
+                  <h2 class="design__cardTitle">Адрес доставки</h2>
+                  <div class="design__bottom">
+                    <div class="design__field">
+                      <label for="streatDelivery" class="design__label">Улица <span>*</span> </label>
+                      <input id="streatDelivery" type="address" class="design__input"
+                        placeholder="Начните вводить улицу..." />
+                    </div>
+                    <div class="design__group">
+                      <div class="design__field">
+                        <label for="houseDelivery" class="design__label">Дом <span>*</span></label>
+                        <input id="houseDelivery" type="address" class="design__input" placeholder="1А" />
+                      </div>
+                      <div class="design__field">
+                        <label for="addressDelivery" class="design__label">Квартира / Офис</label>
+                        <input id="addressDelivery" type="address" class="design__input" placeholder="Кв. или офис" />
+                      </div>
+                    </div>
+                    <div class="design__group">
+                      <div class="design__field">
+                        <label for="etranceDelivery" class="design__label">Подъезд</label>
+                        <input id="etranceDelivery" type="text" class="design__input" placeholder="1" />
+                      </div>
+                      <div class="design__field">
+                        <label for="floorDelivery" class="design__label">Этаж</label>
+                        <input id="floorDelivery" type="text" class="design__input" placeholder="5" />
+                      </div>
+                    </div>
+                    <div class="design__field">
+                      <label for="commentDelivery" class="design__label">Комментарий к заказу</label>
+                      <textarea id="commentDelivery" class="design__textarea"
+                        placeholder="Например: домофон не работает, позвоните как приедете"></textarea>
+                    </div>
+                  </div>
+                </form>
+                <form action="" class="design__card design__formTime">
+                  <h3 class="design__cardTitle">Время доставки</h3>
+                  <div class="design__bottom">
+                    <div class="design__radios">
+                      <label class="design__radio">
+                        <input type="radio" name="time" class="design__radioInput" checked />
+                        <p>Как можно скорее</p>
+                      </label>
+                      <label class="design__radio">
+                        <input type="radio" name="time" class="design__radioInput" />
+                        <p>Ко времени</p>
+                      </label>
+                    </div>
+                    <div class="design__field">
+                      <label for="timeDelivery" class="design__label">Время</label>
+                      <div class="design__selectWrap">
+                        <button type="button" id="timeDelivery" class="design__select">
+                          12:00 – 13:00
+                          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L7 7L13 1" stroke="#B3B3B3" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <ul class="design__selectList">
+                          <li><button type="button" class="design__selectOption btn-reset">10:00 – 11:00</button></li>
+                          <li><button type="button" class="design__selectOption btn-reset">11:00 – 12:00</button></li>
+                          <li><button type="button" class="design__selectOption btn-reset is-selected">12:00 –
+                              13:00</button>
+                          </li>
+                          <li><button type="button" class="design__selectOption btn-reset">13:00 – 14:00</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="design__right">
+                <h3>Ваш заказ</h3>
+                <div class="design__items">
+                  <div class="design__item">
+                    <img src="img/main/food.png" alt="" class="design__itemImg" />
+                    <div class="design__itemInfo">
+                      <h4 class="design__itemTitle">Баттер Чикен</h4>
+                      <p class="design__itemDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                        Классика, которую любят все</p>
+                      <p class="design__itemPrice">380 ₽</p>
+                    </div>
+                  </div>
+                  <div class="design__item">
+                    <img src="img/main/food.png" alt="" class="design__itemImg" />
+                    <div class="design__itemInfo">
+                      <h4 class="design__itemTitle">Баттер Чикен</h4>
+                      <p class="design__itemDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                        Классика, которую любят все</p>
+                      <p class="design__itemPrice">380 ₽</p>
+                    </div>
+                  </div>
+                  <div class="design__item">
+                    <img src="img/main/food.png" alt="" class="design__itemImg" />
+                    <div class="design__itemInfo">
+                      <h4 class="design__itemTitle">Баттер Чикен</h4>
+                      <p class="design__itemDesc">Нежное куриное филе в сливочно-томатном соусе с мягкими специями.
+                        Классика, которую любят все</p>
+                      <p class="design__itemPrice">380 ₽</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="design__totals">
+                  <p class="design__totalRow">Сумма: <span>1140 ₽</span></p>
+                  <p class="design__totalRow">Доставка: <span>200 ₽</span></p>
+                  <p class="design__totalFinal">К оплате: 1340 ₽ </p>
+                </div>
+                <button type="button" class="design__submit btn-reset" data-order-submit>Подтвердить заказ</button>
+              </div>
             </div>
-            <label for="emailContact" class="design__labelContact">Email</label>
-            <input id="emailContact" type="email" class="design__input__label" placeholder="name@company.ru" />
-          </form>
-          <form action="" class="design__formDelivery">
-            <h2>Адрес доставки</h2>
-            <label for="streatDelivery" class="design__labelDelivery">Улица <span>*</span></label>
-            <input id="streatDelivery" type="text" class="design__input__label"
-              placeholder="Начните вводить улицу..." />
-            <div class="design__groupTopDelivery">
-              <label for="houseDelivery" class="design__labelDelivery">Дом <span>*</span></label>
-              <input id="houseDelivery" type="text" class="design__input__label" placeholder="1А" />
-              <label for="addressDelivery" class="design__labelDelivery">Квартира / Офис</label>
-              <input id="addressDelivery" type="text" class="design__input__label" placeholder="Кв. или офис" />
+          </div>
+        </div>
+        <div class="design__modalOverlay" data-order-modal>
+          <div class="design__modal">
+            <button type="button" class="design__modalClose btn-reset" data-order-modal-close>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L15 15M15 1L1 15" stroke="#B3B3B3" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="design__modalIcon">
+              <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7.5L7 13.5L19 1.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </div>
-            <div class="design__groupBottomDelivery">
-              <label for="etranceDelivery" class="design__labelEtrance">Подъезд <span>*</span></label>
-              <input id="etranceDelivery" type="text" class="design__input__label" placeholder="1" />
-              <label for="floorDelivery" class="design__labelDelivery">Этаж</label>
-              <input id="floorDelivery" type="text" class="design__input__label" placeholder="5" />
+            <div class="design__modalText">
+              <h3 class="design__modalTitle">Спасибо за заказ!</h3>
+              <p class="design__modalDesc">Ваш заказ успешно принят. С вами свяжется администратор для подтверждения
+                деталей.</p>
             </div>
-            <label for="commentDelivery" class="reservation__label">Комментарий к заказу</label>
-            <textarea type="text" class="reservation__input" id="commentDelivery"
-              placeholder="Например: домофон не работает, позвоните как приедете" required></textarea>
-          </form>
-          <form action="" class="form__time">
-            <h3>Время доставки</h3>
-          </form>
+            <a href="index.html" class="design__modalBtn">Вернуться на главную</a>
+          </div>
         </div>
       </section>
     </main>

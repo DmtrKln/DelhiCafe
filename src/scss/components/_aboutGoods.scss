@@ -178,6 +178,8 @@
     }
 
     &__left {
+        display: flex;
+        align-items: baseline;
         gap: 34px;
 
         h1 {

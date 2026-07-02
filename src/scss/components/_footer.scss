@@ -5,11 +5,9 @@
     padding: 86px 0 110px 0;
     overflow: hidden;
 
-    margin: 150px 0 0 0;
 
     @include mobile {
         padding: 70px 0 60px 0;
-        margin: 60px 0 0 0;
     }
 
     &__imgLeft,
@@ -60,7 +58,7 @@
     }
 
     &__logo {
-        z-index: 99999;
+        z-index: 2;
         cursor: pointer;
 
         @media (max-width: 630px) {

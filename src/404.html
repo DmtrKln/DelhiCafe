@@ -10,9 +10,11 @@
       <section class="notFound">
         <div class="container">
           <div class="notFound__wrapp">
+            <img src="img/main/404Ellipse.png" alt="" class="notFound__ellipse">
+            <img src="img/main/404smallElipse.png" alt="" class="notFound__ellipseSmall">
             <div class="notFound__title">
               <h1>404</h1>
-              <h2 class="notFound__subtitle">Страница не найдена</h2>
+              <h2 class="notFound__subtitle">Страница не <br> найдена</h2>
             </div>
             <div class="notFound__content">
               <p class="notFound__desc">
@@ -20,7 +22,7 @@
                 меню.
               </p>
               <div class="notFound__btns">
-                <a href="index.html" class="notFound__btn notFound__btn--primary">Вернуться на главную</a>
+                <a href="index.html#home" class="notFound__btn notFound__btn--primary">Вернуться на главную</a>
                 <a href="menu.html" class="notFound__btn notFound__btn--outline">Наше меню</a>
               </div>
             </div>
@@ -28,6 +30,7 @@
         </div>
       </section>
     </main>
+    @include('partials/footer.html')
   </div>
 </body>
 

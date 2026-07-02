@@ -9,10 +9,28 @@
     &__wrapp {
         display: flex;
         flex-direction: column;
+        position: relative;
         gap: 16px;
 
         @include mobile {
             gap: 12px;
+        }
+    }
+
+    &__ellipse {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__ellipseSmall {
+        position: absolute;
+        top: 10%;
+        right: -20%;
+
+        @include small-tablet {
+            display: none;
         }
     }
 
@@ -33,6 +51,14 @@
             letter-spacing: -0.04em;
             text-align: center;
             color: $pink;
+
+            @include tablet {
+                font-size: 280px;
+            }
+
+            @include small-tablet {
+                font-size: 212px;
+            }
 
             @include mobile {
                 font-size: 120px;
@@ -57,6 +83,13 @@
         text-align: center;
         color: #fff;
 
+        @include tablet {
+            font-size: 60px;
+        }
+
+        @include small-tablet {
+            font-size: 48px;
+        }
 
         @include mobile {
             font-size: 32px;
@@ -75,15 +108,26 @@
         max-width: 800px;
         margin: 0 auto;
         width: 100%;
+
+        @include mobile{
+            font-size: 16px;
+        }
     }
 
     &__btns {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 16px;
+
+        @include mobile{
+            gap: 12px;
+        }
     }
 
     &__btn {
+        display: flex;
+        justify-content: center;
         font-family: $font3;
         width: fit-content;
         padding: 12px 28px;
@@ -92,12 +136,18 @@
         font-weight: 600;
         font-size: 16px;
         color: #fff;
+        z-index: 1;
 
         border: 1px solid transparent;
         transition: .3s all ease;
 
+        @include mobile{
+            padding: 14px 20px;
+            width: 100%;
+        }
+
         &:hover {
-            border: 2px solid $pink;
+            border: 1px solid $pink;
             background-color: #fff;
             color: $pink;
 

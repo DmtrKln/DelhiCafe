@@ -71,6 +71,7 @@
             width: 100%;
             border-radius: 30px;
             max-height: 378px;
+            border: none;
         }
 
         @media (max-width: 1300px) {
@@ -159,6 +160,11 @@
             font-weight: 300;
             font-size: 18px;
             color: #fff;
+            cursor: pointer;
+
+            &:hover{
+                color: $pink;
+            }
         }
     }
 

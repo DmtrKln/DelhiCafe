@@ -6,3 +6,4 @@ import "./components/_header";
 import "./components/_main";
 import "./components/_catalog";
 import "./components/_phone-mask";
+import "./components/_design";
